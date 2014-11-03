@@ -1,0 +1,25 @@
+@function f-calc--font-size($exponent){
+  @return pow($type__scale-factor, $exponent);
+}
+
+@function f-calc--font-margin($exponent){
+  @return pow($type__line-height, $exponent);
+}
+
+@function f-calc--line-height($exponent){
+  @return $type__line-height * $exponent;
+}
+
+@function f-pxem($target, $original){
+  @return #{$target/$original}em;
+}
+
+@function f-percentage($target, $container){
+  @return ($target / $container) * 100%;
+}
+
+@function f-columns($target, $total){
+	$target_val: ($target * $columns) + (($target - 1) * $gutter-width);
+	$total_val: ($total * $columns) + (($total - 1) * $gutter-width);
+	@return ($target_val / $total_val) * 100%;
+}

@@ -1,0 +1,105 @@
+// The Holy Grail aka Mixins City //
+
+// Guidelines
+
+	/*
+		• Mixins are used to output blocks of code using passed in parameters
+		• Mixins should be used for grouping browser-prefixed code and breakpoint changes
+		• All mixins should be prepended with 'm-' 
+	*/
+
+// Contents
+
+	/*
+		1. Border Radius (m-border-radius)
+		2. Font Size (m-font-size)
+		3. Opacity (m-opacity)
+		4. Placeholder (m-placeholder)
+		5. Respond (m-respond)
+		6. Transition (m-transition)
+	*/
+
+
+/*-- 1. Border Radius --*/
+
+	@mixin m-border-radius($vals: 'auto') {
+		overflow: hidden;
+		background-clip: padding-box;
+	  	
+	  	@if $vals == 'auto' {
+
+	    	-webkit-border-radius: 0.25em;
+	    	-moz-border-radius: 0.25em;
+	    	border-radius: 0.25em;
+
+	  	} @else {
+
+	    	-webkit-border-radius: $vals;
+	    	-moz-border-radius: $vals;
+	    	border-radius: $vals;
+
+		}
+	}
+
+/*-- 2. Font Size --*/
+
+	@mixin m-font-size($target, $original) {
+		font-size: #{$target}px;
+		font-size: #{$target/$original}rem;
+	}
+
+
+/*-- 3. Opacity --*/
+
+	@mixin m-opacity($value){
+		$fullValue: $value;
+		$newValue: $value / 100;
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$fullValue})";
+		-moz-opacity: $newValue;
+		opacity: $newValue;
+	}
+
+
+/*-- 4. Placeholder --*/
+
+	@mixin m-placeholder($color) {
+		&::-webkit-input-placeholder {
+		   color: $color;
+		}
+
+		&:-moz-placeholder { /* Firefox 18- */
+			color: $color;  
+		}
+
+		&::-moz-placeholder {  /* Firefox 19+ */
+			color: $color;  
+		}
+
+		&:-ms-input-placeholder {  
+			color: $color;  
+		}
+	}
+
+
+
+/*-- 5. Respond --*/
+
+	@mixin m-respond($breakpoint) { 
+		@if map-has-key($breakpoints, $breakpoint) {
+			@media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+	    		@content;
+	    	}
+		}
+	}
+
+
+/*-- 6. Transition --*/
+
+	@mixin m-transition($props) {
+	    -webkit-transition: $props;
+	    -moz-transition: $props;
+	    -o-transition: $props;
+	    -ms-transition: $props;
+	    transition: $props;
+	}
+	

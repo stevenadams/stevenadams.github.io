@@ -1,0 +1,42 @@
+//Colors
+$white: #ffffff;
+$black: #202020;
+$grey: #515151;
+$grey--light: #e4e4e4;
+$grey--dark: #3d3d3d;
+// $gret--dark: #343434;
+$red: #C71614;
+$red--dark: darken($red, 10%);
+
+//Grid
+$grid__columns: 12;
+$grid__max-width: 980px;
+$grid__gutter: 20px;
+
+// Breakpoints
+$breakpoints: (
+	mobile: 480px,
+	tablet: 767px,
+  	desk: 992px,
+  	wide: 1200px
+);
+
+// Typography
+$type__font-base: 1em !default;
+$type__line-height: 1.5em;
+$type__scale-factor: 1.5em;
+
+$type__family--main: 'Adelle', sans-serif;
+$type__family--alt: 'Brandon Grotesque', sans-serif;
+$type__family--heading: 'Brandon Grotesque Black', sans-serif;
+
+
+
+// h1{
+//   margin-top: calc__font-margin(2);
+//   margin-bottom: calc__font-margin(1);
+//   font-size: calc__font-size(3);
+//   line-height: calc__line-height(2);
+
+//   @extend %font-family--main;
+// }

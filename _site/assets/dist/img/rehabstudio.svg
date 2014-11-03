@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="101px" height="101px" viewBox="0 0 101 101" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.0.4 (8053) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="-2.26062952%" y1="-2.27205426%" x2="56.1777738%" y2="56.1798956%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#000000" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="REHABSTUDIO-+-Group-+-Front-End-Developer-+-2012" sketch:type="MSLayerGroup" transform="translate(-33.000000, 1.000000)">
+            <g id="Group-+-Front-End-Developer-+-2012" transform="translate(5.000000, 0.000000)" sketch:type="MSShapeGroup">
+                <g id="Group" transform="translate(28.000000, 0.000000)">
+                    <path d="M37.9565353,-0.1335 L37.9565353,37.65 L0.125680576,37.65 L0.125680576,62.165 L37.9565353,62.165 L37.9565353,99.8865 L62.5198273,99.8865 L62.5198273,62.165 L100.269565,62.165 L100.269565,37.65 L62.5198273,37.65 L62.5198273,-0.1335 L37.9565353,-0.1335 Z" id="Shape" fill="#202020"></path>
+                    <path d="M50.2071367,49.9075 L50.2071367,99.8865 L62.5198273,99.8865 L62.5198273,62.1445 L100.269565,62.1445 L100.269565,49.9075 L50.2071367,49.9075 Z" id="Shape" opacity="0.4" fill="url(#linearGradient-1)"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

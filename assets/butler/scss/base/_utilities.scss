@@ -1,0 +1,15 @@
+.u-clearfix{
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+.u-block{
+	display: block;
+}
+
+.u-tight{
+	margin: 0;
+}
