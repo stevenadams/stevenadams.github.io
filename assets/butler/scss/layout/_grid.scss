@@ -1,10 +1,10 @@
 // Grid Calculation for Percentages
-$row: $grid__max-width - ($grid__gutter * 2);
-$margin_right: percentage($grid__gutter / $row);
-$col: (($row + $grid__gutter) / $grid__columns);
+$grid__max-width: $grid__max-width - ($grid__gutter * 2);
+$margin_right: percentage($grid__gutter / $grid__max-width);
+$col: (($grid__max-width + $grid__gutter) / $grid__columns);
 
 @mixin grid-column($num) {
-	width: percentage((($col * $num) - $grid__gutter) / $row);
+	width: percentage((($col * $num) - $grid__gutter) / $grid__max-width);
 }
 
 @mixin nest-column($context, $num) {
@@ -38,18 +38,13 @@ $col: (($row + $grid__gutter) / $grid__columns);
 	
 	&__col{
 		position: relative;
-		// display: inline-block;
+		display: inline-block;
 		display: block;
 		vertical-align: top;
 		margin-right: $margin_right;
 
 		&--tight{
 			margin-right: 0;
-		}
-
-		&--padding{
-			margin-right: 0;
-			padding: 1.25em $margin_right;
 		}
 
 		// Generates styles

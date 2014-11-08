@@ -9,12 +9,4 @@
 	-webkit-font-smoothing: antialiased;
 }
 
-html, body{
-	position: relative;
-	margin: 0;
-	height: 100%;
-}
 
-body{
-	@extend %font-family--main;
-}

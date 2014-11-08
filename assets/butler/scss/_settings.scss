@@ -2,7 +2,7 @@
 $white: #ffffff;
 $black: #202020;
 $grey: #515151;
-$grey--light: #e4e4e4;
+$grey--light: #eaeaea;
 $grey--dark: #3d3d3d;
 // $gret--dark: #343434;
 $red: #C71614;
@@ -21,15 +21,36 @@ $breakpoints: (
   	wide: 1200px
 );
 
-// Typography
-$type__font-base: 1em !default;
+// Set to true if you want to add support for IE6 and IE7
+$legacy_support_for_ie: false !default; 
+
+$normalize_headings: true !default;
+
+$font__base-size: 16px !default;
 $type__line-height: 1.5em;
 $type__scale-factor: 1.5em;
 
-$type__family--main: 'Adelle', sans-serif;
-$type__family--alt: 'Brandon Grotesque', sans-serif;
-$type__family--heading: 'Brandon Grotesque Black', sans-serif;
+$font--serif: 'Adelle', sans-serif;
+$font--sans-serif: 'Brandon Grotesque', sans-serif;
+$font--heading: 'Brandon Grotesque Black', sans-serif;
+$font--body: $font--serif;
 
+$h1: 40px !default;
+$h2: 32px !default;
+$h3: 24px !default;
+$h4: 18px !default;
+$h5: 16px !default;
+$h6: 14px !default;
+
+$h1__margin: 0.67em 0 !default;
+$h2__margin: 0.83em 0 !default;
+$h3__margin: 1em 0 !default;
+$h4__margin: 1.33em 0 !default;
+$h5__margin: 0 0 !default;
+$h6__margin: 2.33em 0 !default;
+
+$background: $white !default;
+$color: $black !default;
 
 
 // h1{

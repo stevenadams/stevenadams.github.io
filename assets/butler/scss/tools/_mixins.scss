@@ -5,7 +5,6 @@
 	/*
 		• Mixins are used to output blocks of code using passed in parameters
 		• Mixins should be used for grouping browser-prefixed code and breakpoint changes
-		• All mixins should be prepended with 'm-' 
 	*/
 
 // Contents
@@ -15,14 +14,14 @@
 		2. Font Size (m-font-size)
 		3. Opacity (m-opacity)
 		4. Placeholder (m-placeholder)
-		5. Respond (m-respond)
+		5. Media (media)
 		6. Transition (m-transition)
 	*/
 
 
 /*-- 1. Border Radius --*/
 
-	@mixin m-border-radius($vals: 'auto') {
+	@mixin border-radius($vals: 'auto') {
 		overflow: hidden;
 		background-clip: padding-box;
 	  	
@@ -43,7 +42,7 @@
 
 /*-- 2. Font Size --*/
 
-	@mixin m-font-size($target, $original) {
+	@mixin font-size($target, $original) {
 		font-size: #{$target}px;
 		font-size: #{$target/$original}rem;
 	}
@@ -51,7 +50,7 @@
 
 /*-- 3. Opacity --*/
 
-	@mixin m-opacity($value){
+	@mixin opacity($value){
 		$fullValue: $value;
 		$newValue: $value / 100;
 		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$fullValue})";
@@ -62,7 +61,7 @@
 
 /*-- 4. Placeholder --*/
 
-	@mixin m-placeholder($color) {
+	@mixin placeholder($color) {
 		&::-webkit-input-placeholder {
 		   color: $color;
 		}
@@ -84,7 +83,7 @@
 
 /*-- 5. Respond --*/
 
-	@mixin m-respond($breakpoint) { 
+	@mixin respond($breakpoint) { 
 		@if map-has-key($breakpoints, $breakpoint) {
 			@media (min-width: #{map-get($breakpoints, $breakpoint)}) {
 	    		@content;
@@ -95,7 +94,7 @@
 
 /*-- 6. Transition --*/
 
-	@mixin m-transition($props) {
+	@mixin transition($props) {
 	    -webkit-transition: $props;
 	    -moz-transition: $props;
 	    -o-transition: $props;

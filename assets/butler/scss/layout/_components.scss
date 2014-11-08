@@ -4,6 +4,30 @@
 	&--grey-dark{background: $grey--dark; color: $white;}
 }
 
+.text{
+	&--center{text-align: center;}
+}
+
+.text-columns{
+	-webkit-column-gap: 5em;
+	-moz-column-gap: 5em;
+	column-gap: 5em;
+
+	&--2{
+		-webkit-columns: 2;
+		-moz-columns: 2;
+		columns: 2;
+	}
+}
+
+.home-section{
+	padding: 3.75em 0;
+
+	& + &{
+		padding-top: 0;
+	}
+}
+
 .block{
 	position: relative;
 	display: block;
@@ -76,7 +100,7 @@
 		// float: left;
 		// margin-right: 1em;
 
-		font-family: $type__family--alt;
+		font-family: $font--sans-serif;
 		letter-spacing: 1px;
 		text-transform: uppercase;
 		//line-height: 3.75em;
@@ -95,10 +119,10 @@
 		color: $white;
 		text-decoration: none;
 
-		@include m-transition(border 0.4s ease-in-out);
+		@include transition(border 0.4s ease-in-out);
 
 		&:hover{
-			// border-bottom-color: $red;
+			// border-bottocolor: $red;
 		}
 	}
 }
@@ -142,25 +166,25 @@
 	}
 }
 
-.site-footer{
-	position: relative;
-	display: block;
-	width: 100%;
-	padding: 1.25em 0;
 
-	background: $red;
+.experience{
+	text-align: center;
 
-	color: $red--dark;
-	@include m-font-size(24, 16);
+	&__block{
+		display: inline-block;
+		float: none;
+	}
 
-	&__copy{
-		float: left;
-
-		font-family: $type__family--heading;
-		letter-spacing: 1px;
-		text-transform: uppercase;
+	&__image{
+		position: relative;
+		display: block;
+		margin: 0 auto em(32,16);
+		max-width: 100%;
+		max-height: 100px;
 	}
 }
+
+
 
 .social{
 	position: relative;
@@ -189,7 +213,7 @@
 	&:hover{
 		color: darken($red--dark, 6%);
 
-		@include m-transition(color 0.4s ease-in-out);
+		@include transition(color 0.4s ease-in-out);
 	}
 }
 
@@ -300,18 +324,18 @@
 //   }
 // }
 
-.experience{
-	text-align: center;
+// .experience{
+// 	text-align: left;
 
-	&__block{
+// 	&__block{
+// 		margin-bottom: 2rem;
+// 	}
 
-	}
-
-	&__image{
-		position: relative;
-		display: block;
-		margin: 0 auto f-pxem(32,16);
-		max-width: 100%;
-		max-height: 100px;
-	}
-}
+// 	&__image{
+// 		position: relative;
+// 		display: block;
+// 		margin: 0 0 f-pxem(10,16);
+// 		max-width: 60px;
+// 		max-height: 60px;
+// 	}
+// }
