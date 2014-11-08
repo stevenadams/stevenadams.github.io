@@ -70,6 +70,7 @@ html {
 	background: $background;
 	color: $color;
     font-size: $font__base-size;
+    line-height: $font__line-height;
     -webkit-text-size-adjust: 100%; // 2
     -ms-text-size-adjust: 100%; // 2
 }
@@ -148,6 +149,7 @@ a {
         font-size: rem($h2);
         margin: $h2__margin;
         font-family: $font--body;
+        line-height: 1em;
     }
 
     h3, .text--h3 {
@@ -156,6 +158,7 @@ a {
         margin: $h3__margin;
         font-family: $font--heading;
         letter-spacing: 1px;
+        line-height: 1em;
         text-transform: uppercase;
     }
 
@@ -163,18 +166,21 @@ a {
         font-size: $h4;
         font-size: rem($h4);
         margin: $h4__margin;
+        line-height: 1em;
     }
 
     h5, .text--h5 {
         font-size: $h5;
         font-size: rem($h5);
         margin: $h5__margin;
+        line-height: 1em;
     }
 
     h6, .text--h6 {
         font-size: $h6;
         font-size: rem($h6);
         margin: $h6__margin;
+        line-height: 1em;
     }
 }
 
