@@ -1,11 +1,18 @@
 //Colors
 $white: #ffffff;
+$off-white: darken($white, 4%);
+
 $black: #202020;
+
 $grey: #515151;
-$grey--light: #eaeaea;
 $grey--dark: #3d3d3d;
 // $gret--dark: #343434;
 $red: #C71614;
+$red--dark: darken($red, 10%);
+
+$border: darken($white, 10%);
+
+$red: #EE3A43;
 $red--dark: darken($red, 10%);
 
 //Grid
@@ -30,9 +37,11 @@ $font__base-size: 16px !default;
 $font__line-height: 1.5em;
 $type__scale-factor: 1.5em;
 
-$font--serif: 'Adelle', sans-serif;
-$font--sans-serif: 'Brandon Grotesque', sans-serif;
-$font--heading: 'Brandon Grotesque Black', sans-serif;
+$font--serif: 'Adelle', serif;
+$font--serif: 'Merriweather', serif;
+
+$font--sans-serif: 'Gotham', sans-serif;
+$font--heading: 'Gotham Bold', sans-serif;
 $font--body: $font--serif;
 
 $h1: 40px !default;

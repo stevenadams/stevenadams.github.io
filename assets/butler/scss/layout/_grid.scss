@@ -52,11 +52,11 @@ $col: (($grid__max-width + $grid__gutter) / $grid__columns);
 			
 			&--#{$i} {
 				@include grid-column($i);
+			}
 
-				@for $s from 1 through $i {
-					&-n#{$s} {
-						@include nest-column($i, $s);
-					}
+			@for $s from 1 through $i {
+				&--#{$s}of#{$i} {
+					@include nest-column($i, $s);
 				}
 			}
 		}

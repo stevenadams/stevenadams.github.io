@@ -135,13 +135,13 @@ a {
 
 @if $normalize_headings == true {
     h1, .text--h1 {
-        font-family: $font--heading;
+        font-family: $font--serif;
         font-size: $h1;
         font-size: rem($h1);
         margin: 0 0 $h1__margin;
-        letter-spacing: 1px;
+        // letter-spacing: 1px;
         line-height: 1em;
-        text-transform: uppercase;
+        // text-transform: uppercase;
     }
 
     h2, .text--h2 {
@@ -165,15 +165,21 @@ a {
     h4, .text--h4 {
         font-size: $h4;
         font-size: rem($h4);
-        margin: $h4__margin;
+        margin: 0 0 $h4__margin;
         line-height: 1em;
+        font-family: $font--heading;
+        letter-spacing: 1px;
+        line-height: 1em;
+        text-transform: uppercase;
     }
 
     h5, .text--h5 {
         font-size: $h5;
         font-size: rem($h5);
+        font-family: 'Gotham Bold';
         margin: $h5__margin;
         line-height: 1em;
+        text-transform: uppercase;
     }
 
     h6, .text--h6 {
@@ -345,6 +351,7 @@ nav {
 //    code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
 
 img {
+    max-width: 100%;
     border: 0; // 1
     @if $legacy_support_for_ie {
         -ms-interpolation-mode: bicubic; // 2
