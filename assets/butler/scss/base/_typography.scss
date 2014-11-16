@@ -2,8 +2,9 @@
 	&--home-section{
 		margin-bottom: 2em;
 		font-family: $font--heading;
-		font-size: $h3;
-		font-size: rem($h3);
+		font-size: $h4;
+		font-size: rem($h4);
+		text-transform: uppercase;
 
 		&:after{
 			content: '';

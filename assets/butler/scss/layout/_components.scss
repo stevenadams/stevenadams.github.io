@@ -1,10 +1,11 @@
 .bg{
 	&--grey{background: $grey; color: $white;}
-	// &--grey-light{background: $grey--light; color: $black;}
+	&--off-white{background: $off-white;}
 	&--grey-dark{background: $grey--dark; color: $white;}
 }
 
 .text{
+	&--red{color: $red;}
 	&--center{text-align: center;}
 }
 
@@ -40,17 +41,23 @@
 	display: block;
 	width: 100%;
 	padding: 1.25em 0;
-	//background: $black;
+	background: rgba($black,0.4);
 
-	color: $black;
+	color: $white;
 
-	@extend %clearfix;
+	&__inner{
+		position: relative;
+		margin: 0 auto;
+		width: 90%;
+
+		@extend %clearfix;
+	}
 
 	&__home{
 		position: relative;
 		display: block;
 		float: left;
-		max-width: 220px;
+		max-width: 60px;
 	}
 
 	&__logo{
@@ -82,6 +89,7 @@
 
 		font-family: $font--sans-serif;
 		letter-spacing: 1px;
+		line-height: 1em;
 		text-transform: uppercase;
 		//line-height: 3.75em;
 
@@ -113,17 +121,30 @@
 	display: block;
 	width: 100%;
 
-	color: $black;
+	color: $white;
+
+
 
 	&--home{
+		height: 100%;
 		padding: rem(150) 0 rem(40);
 
-		border-bottom: 1px solid $border;
+		// border-bottom: 1px solid $border;
 
 		text-align: center;
+
+		background: url('img/header--home.jpg');
+		background-size: cover;
+
 	}
 
 	&__title{
+		display: table-cell;
+		vertical-align: middle;
+		font-size: 48px;
+		font-size: rem(48);
+		margin-bottom: 0;
+
 		&--home{
 			
 		}
@@ -132,6 +153,7 @@
 
 
 .experience{
+	padding-top: 3.75em;
 	text-align: center;
 
 	&__block{
@@ -184,34 +206,11 @@
 
 
 .block{
-	// padding: 3.75em 0;
+	padding: 3.75em 0;
 }
 
-.about{
+.home-about{
 
-	background: $off-white;
-
-
-	&__bio{
-		float: right;
-		padding: 3.75em 2em;
-		// background: $grey--light;
-
-		&:before{
-			content: '';
-			position: absolute;
-			top: 0;
-			left: -100%;
-			display: block;
-			height: 100%;
-			width: 100%;
-
-			background: url('img/about.jpg');
-			background-size: cover;
-			background-position: left;
-			// background-size: cover;
-		}
-	}
 }
 
 .experience{
