@@ -135,28 +135,30 @@ a {
 
 @if $normalize_headings == true {
     h1, .text--h1 {
-        font-family: $font--serif;
+        font-family: $font--sans-serif;
         font-size: $h1;
         font-size: rem($h1);
         margin: 0 0 $h1__margin;
-        // letter-spacing: 1px;
+        letter-spacing: 1px;
         line-height: 1em;
-        // text-transform: uppercase;
+        font-weight: 700;
+        text-transform: uppercase;
     }
 
     h2, .text--h2 {
         font-size: $h2;
         font-size: rem($h2);
         margin: $h2__margin;
-        font-family: $font--body;
+        font-family: $font--serif;
         line-height: 1em;
     }
 
     h3, .text--h3 {
         font-size: $h3;
         font-size: rem($h3);
+        font-weight: 700;
         margin: $h3__margin;
-        font-family: $font--heading;
+        font-family: $font--sans-serif;
         letter-spacing: 1px;
         line-height: 1em;
         text-transform: uppercase;
@@ -167,19 +169,19 @@ a {
         font-size: rem($h4);
         margin: 0 0 $h4__margin;
         line-height: 1em;
-        font-family: $font--heading;
+        font-family: $font--sans-serif;
         letter-spacing: 1px;
         line-height: 1em;
         text-transform: uppercase;
     }
 
     h5, .text--h5 {
+        font-family: $font--serif;
         font-size: $h5;
         font-size: rem($h5);
-        font-family: 'Gotham Bold';
-        margin: $h5__margin;
+        // font-weight: 700;
         line-height: 1em;
-        text-transform: uppercase;
+        margin: $h5__margin;
     }
 
     h6, .text--h6 {
@@ -187,6 +189,10 @@ a {
         font-size: rem($h6);
         margin: $h6__margin;
         line-height: 1em;
+    }
+
+    a{
+        font-weight: inherit;
     }
 }
 

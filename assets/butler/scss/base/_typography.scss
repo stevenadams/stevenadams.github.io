@@ -1,19 +1,15 @@
 .title{
-	&--home-section{
+	&--section{
 		margin-bottom: 2em;
-		font-family: $font--heading;
-		font-size: $h4;
-		font-size: rem($h4);
-		text-transform: uppercase;
 
 		&:after{
 			content: '';
 			position: relative;
 			display: block;
-			// margin: 0 auto;
-			width: 60px;
-			padding-top: em(10);
-			border-bottom: 4px solid $red;
+			margin: 0 auto;
+			width: 40px;
+			padding-top: rem(10);
+			border-bottom: 6px solid $pink;
 		}
 	}
 }

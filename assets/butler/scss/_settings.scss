@@ -9,6 +9,7 @@ $grey--dark: #3d3d3d;
 // $gret--dark: #343434;
 $red: #C71614;
 $red--dark: darken($red, 10%);
+$pink: #f82959;
 
 $border: darken($white, 10%);
 
@@ -37,14 +38,13 @@ $font__base-size: 16px !default;
 $font__line-height: 1.5em;
 $type__scale-factor: 1.5em;
 
-$font--serif: 'Adelle', serif;
+$font--serif: 'Georgia', serif;
 // $font--serif: 'Merriweather', serif;
 
-$font--sans-serif: 'Gotham', sans-serif;
-$font--heading: 'Gotham Bold', sans-serif;
+$font--sans-serif: 'Montserrat', sans-serif;
 $font--body: $font--serif;
 
-$h1: 40px !default;
+$h1: 48px !default;
 $h2: 32px !default;
 $h3: 24px !default;
 $h4: 18px !default;

@@ -1,3 +1,11 @@
+.hr--thick-pink{
+	background: #F82959;
+	border: none;
+	height: 10px;
+	margin: 10px auto;
+	width: 80px;
+}
+
 .bg{
 	&--grey{background: $grey; color: $white;}
 	&--off-white{background: $off-white;}
@@ -5,8 +13,10 @@
 }
 
 .text{
-	&--red{color: $red;}
+	&--pink{color: $pink;}
+	&--white{color: $white;}
 	&--center{text-align: center;}
+	&--italic{font-style: italic;}
 }
 
 .text-columns{
@@ -41,7 +51,7 @@
 	display: block;
 	width: 100%;
 	padding: 1.25em 0;
-	background: rgba($black,0.4);
+	// background: rgba($black,0.4);
 
 	color: $white;
 
@@ -101,17 +111,32 @@
 	&__link{	
 		display: block;
 		@include padding-height(60);
-	
-		border-bottom: 2px solid transparent;
 
 		color: inherit;
 		text-decoration: none;
 
 		@include transition(border 0.4s ease-in-out);
 
+		&:after{
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 4px;
+			background: $pink;
+			content: '';
+			@include opacity(0);
+			
+			@include transition((opacity 0.4s ease-in-out, bottom 0.4s ease-in-out));
+		}
+
 		&:hover{
-			border-bottom-color: $red;
 			color: inherit;
+
+			&:after{
+				@include opacity(100);
+				bottom: 10px;
+			}
 		}
 	}
 }
@@ -121,13 +146,10 @@
 	display: block;
 	width: 100%;
 
-	color: $white;
-
-
 
 	&--home{
-		height: 100%;
-		padding: rem(150) 0 rem(40);
+		// height: 100%;
+		padding: rem(212) 0 rem(120);
 
 		// border-bottom: 1px solid $border;
 
@@ -151,10 +173,15 @@
 	}
 }
 
+.social-links{
+	font-size: 24px;
+	font-size: rem(24px);
+	text-align: center;
+}
 
 .experience{
-	padding-top: 3.75em;
 	text-align: center;
+	background: $pink;
 
 	&__block{
 		display: inline-block;
