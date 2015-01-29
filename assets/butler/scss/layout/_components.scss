@@ -71,8 +71,20 @@
 	}
 
 	&__logo{
+		background: $pink;
 		display: block;
 		max-width: 100%;
+		padding: 10px;
+
+		&:before{
+			background: inherit;
+			content: '';
+			display: block;
+			height: 20px;
+			position: absolute;
+			top: -20px;
+			width: 100%;
+		}
 	}
 	@mixin padding-height($size) {
 	  $padding: (($size - $font__base-size) / 2);
