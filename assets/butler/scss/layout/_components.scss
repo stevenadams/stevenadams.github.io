@@ -64,17 +64,12 @@
 	}
 
 	&__home{
-		position: relative;
+		background: $pink;
 		display: block;
 		float: left;
 		max-width: 60px;
-	}
-
-	&__logo{
-		background: $pink;
-		display: block;
-		max-width: 100%;
 		padding: 10px;
+		position: relative;
 
 		&:before{
 			background: inherit;
@@ -86,6 +81,12 @@
 			width: 100%;
 		}
 	}
+
+	&__logo{
+		display: block;
+		max-width: 100%;
+	}
+
 	@mixin padding-height($size) {
 	  $padding: (($size - $font__base-size) / 2);
 	  $padding: rem($padding);
