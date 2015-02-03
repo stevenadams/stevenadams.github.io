@@ -71,6 +71,7 @@ html {
     background-image: -o-linear-gradient($pink, transparent);
     background-image: -webkit-linear-gradient($pink, transparent);
     background-image: linear-gradient($pink, transparent);
+    background-repeat: no-repeat;
     color: $color;
     font-size: $font__base-size;
     line-height: $font__line-height;
