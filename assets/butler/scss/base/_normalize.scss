@@ -67,12 +67,16 @@ html {
     @if $legacy_support_for_ie {
         font-size: 100%; // 1
     }
-	background: $background;
-	color: $color;
+    background-color: $background;
+    background-image: -o-linear-gradient($pink, transparent);
+    background-image: -webkit-linear-gradient($pink, transparent);
+    background-image: linear-gradient($pink, transparent);
+    color: $color;
     font-size: $font__base-size;
     line-height: $font__line-height;
-    -webkit-text-size-adjust: 100%; // 2
+    margin: 0;
     -ms-text-size-adjust: 100%; // 2
+    -webkit-text-size-adjust: 100%; // 2
 }
 
 // Addresses font-family inconsistency between 'textarea' and other form elements.
@@ -89,8 +93,12 @@ textarea {
 
 html, body{
     position: relative;
-    margin: 0;
     height: 100%;
+}
+
+body{
+    background: $background;
+    margin: 10px 10px 0;
 }
 
 
