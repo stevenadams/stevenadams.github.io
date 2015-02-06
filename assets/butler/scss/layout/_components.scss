@@ -286,3 +286,20 @@
 		display: block;
 	}
 }
+
+.mosaic{
+	ul{
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	li{
+		margin: 0;
+		width: 25%;
+
+		& > *{
+			max-width: 100%;
+		}
+	}
+}
