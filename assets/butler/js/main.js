@@ -1,7 +1,7 @@
 function mason() {
-    var tiles = $(".links");
-    new Masonry(n, {
+    var tiles = $(".tile");
+    new Masonry($('.mosaic .container'), {
         columnWidth: 320,
-        itemSelector: ".links__tile"
+        itemSelector: ".tile"
     })
 }
