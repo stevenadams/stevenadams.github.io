@@ -1,6 +1,8 @@
 function mason() {
     var tiles = $(".tile");
     new Masonry($('.mosaic .container'), {
-        columnWidth: 300
+        columnWidth: 300,
+        itemSelector: ".tile",
+        gutter: 0
     })
 }
