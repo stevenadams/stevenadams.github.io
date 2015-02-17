@@ -93,8 +93,9 @@ textarea {
 // Addresses margins handled incorrectly in IE6/7
 
 html, body{
-    position: relative;
     height: 100%;
+    margin: 0;
+    position: relative;
 }
 
 body{
