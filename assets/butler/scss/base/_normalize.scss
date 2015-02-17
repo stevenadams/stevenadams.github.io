@@ -67,11 +67,11 @@ html {
     @if $legacy_support_for_ie {
         font-size: 100%; // 1
     }
-    background-color: $background;
-    background-image: -o-linear-gradient($main_color, transparent);
-    background-image: -webkit-linear-gradient($main_color, transparent);
-    background-image: linear-gradient($main_color, transparent);
-    background-repeat: no-repeat;
+    background-color: $main_color;
+    // background-image: -o-linear-gradient($main_color, transparent);
+    // background-image: -webkit-linear-gradient($main_color, transparent);
+    // background-image: linear-gradient($main_color, transparent);
+    // background-repeat: no-repeat;
     color: $color;
     font-size: $font__base-size;
     line-height: $font__line-height;
