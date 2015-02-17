@@ -68,9 +68,9 @@ html {
         font-size: 100%; // 1
     }
     background-color: $background;
-    background-image: -o-linear-gradient($pink, transparent);
-    background-image: -webkit-linear-gradient($pink, transparent);
-    background-image: linear-gradient($pink, transparent);
+    background-image: -o-linear-gradient($main_color, transparent);
+    background-image: -webkit-linear-gradient($main_color, transparent);
+    background-image: linear-gradient($main_color, transparent);
     background-repeat: no-repeat;
     color: $color;
     font-size: $font__base-size;
