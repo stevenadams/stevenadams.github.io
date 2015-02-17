@@ -67,7 +67,7 @@ html {
     @if $legacy_support_for_ie {
         font-size: 100%; // 1
     }
-    background-color: $main_color;
+    // background-color: $main_color;
     // background-image: -o-linear-gradient($main_color, transparent);
     // background-image: -webkit-linear-gradient($main_color, transparent);
     // background-image: linear-gradient($main_color, transparent);
@@ -98,8 +98,8 @@ html, body{
 }
 
 body{
-    background: $background;
-    margin: 10px 10px 0;
+    // background: $background;
+    // margin: 10px 10px 0;
 }
 
 
