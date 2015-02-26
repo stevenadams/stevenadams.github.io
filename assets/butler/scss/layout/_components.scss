@@ -234,11 +234,11 @@
 .social__link{
 	position: relative;
 
-	color: $red--dark;
+	color: $main_color;
 	text-decoration: none;
 
 	&:hover{
-		color: darken($red--dark, 6%);
+		color: darken($main_color, 6%);
 
 		@include transition(color 0.4s ease-in-out);
 	}
