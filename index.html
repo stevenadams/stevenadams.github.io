@@ -3,255 +3,82 @@ layout: main
 title: Home
 ---
 
-<article class="block home-about">
-	<div class="grid home-section">
-		
-		<h3 class="title--section text--center">About</h3>
-		<p class="about__copy">
-				Front-end developer &plus; prototyper with a designer's state of mind. Entusiatic about user experience. Lover of Sass and passionate about problem solving with sane, maintainable, and scalable code.
+<section class="o-wrapper u-pad-t4 u-pad-b4">
+	<h1 class="u-space-b4 u-align-center">About</h1>
+	<div class="o-grid o-grid--center">
+		<figure>
+			<img class="o-grid__item xl-2-12 u-space-b4" src="/assets/dist/img/avatar@2x.png" alt="Steven Adams">
+		</figure>
+
+		<div class="c-social u-space-b4">
+			<a class="c-social__link stevicons stevicons-twitter" href=""></a>
+			<a class="c-social__link stevicons stevicons-linkedin" href=""></a>
+			<a class="c-social__link stevicons stevicons-github" href=""></a>
+			<a class="c-social__link stevicons stevicons-rdio" href=""></a>
+			<a class="c-social__link stevicons stevicons-instagram" href=""></a>
+		</div>
+
+		<p class="o-grid__item xl-2-3 u-text-columns u-text-columns--2">
+			Hi, I'm Steven. A Front-End Developer from the UK, with over 2 years experience working on front-end builds for PHP, Python, Ruby, and C# projects. Passionate about building user interfaces with a focus on scalability, speed, and user experience. Fascinated by new technologies and methodologies such as responsive design, task runners, and prototyping. I love working with agencies and helping to improve their front-end workflow. My everyday toolset includes Sass, JavaScript, HTML, Gulp, Sketch App, and Photoshop. I have a First Class Honours Degree in Interactive Multimedia Design from the University of Ulster. When I get some free time I can usually be found at the gym, behind a drum kit, or just relaxing.
 		</p>
-		<div class="social-links">
-			<a class="s s-twitter"></a>
-			<a class="s s-linkedin"></a>
-			<a class="s s-github"></a>
-			<a class="s s-rdio"></a>
-			<a class="s s-instagram"></a>
+	</div>
+</section>
+
+<section class="c-band c-band--white2 u-pad-t4 u-pad-b4">
+	<div class="o-wrapper">
+		<h1 class="u-space-b4 u-align-center">Experience</h1>
+
+		<ul class="o-grid o-grid--center">
+			<li class="o-grid__item xl-1-4 u-align-center">
+				<img class="u-space-b2" src="/assets/dist/img/rehabstudio.svg">
+				<h3><a href="http://rehabstudio.com">rehabstudio</a></h3>
+				<h4 class="color--grey">2012</h4>
+			<li class="o-grid__item xl-1-4 u-align-center">
+				<img class="u-space-b2" src="/assets/dist/img/fmm.svg">
+				<h3><a href="http://rehabstudio.com">Fresh Made Media</a></h3>
+				<h4 class="color--grey">2014</h4>
+			<li class="o-grid__item xl-1-4 u-align-center">
+				<img class="u-space-b2" src="/assets/dist/img/flint.svg">
+				<h3><a href="http://flintstudios.co.uk.com">Flint Studios</a></h4>
+				<h4 class="color--grey">2015</h4>
+		</ul>
+	</div>
+</section>
+
+<section class="c-band c-band--red u-pad-t4">
+	<div class="o-wrapper u-align-center">
+		<img class="u-pad-r4 u-pad-b4 u-pad-l4 u-inline-block u-vertical-middle" src="assets/dist/img/logos/google.svg">
+		<img class="u-pad-r4 u-pad-b4 u-pad-l4 u-inline-block u-vertical-middle" src="assets/dist/img/logos/redbull.svg">
+		<!-- <img class="u-pad-r4n u-pad-b4 u-pad-l4" src="assets/dist/img/logos/johannes.png"> -->
+		<img class="u-pad-r4 u-pad-b4 u-pad-l4 u-inline-block u-vertical-middle" src="assets/dist/img/logos/citi.svg">	
+		<!-- <img class="u-pad-r4n u-pad-b4 u-pad-l4" src="assets/dist/img/logos/rbtcorp.png"> -->
+		<!-- <img class="u-pad-r4n u-pad-b4 u-pad-l4" src="assets/dist/img/logos/plimsoll.png"> -->
+		<!-- <img class="u-pad-r4n u-pad-b4 u-pad-l4" src="assets/dist/img/logos/drop.png"> -->
+	</div>
+</section>
+
+
+<section class="c-band c-band--white2">
+	<div class="o-wrapper u-pad-t4 u-pad-b4">
+		<h1 class="u-space-b4 u-align-center">Articles</h1>
+		<ul class="o-grid o-grid--center">
+				
+				{% for post in site.posts limit:3 %}
+					<li class="o-grid__item xl-1-3 u-space-b4">
+						<div class="c-card">
+							<figure class="c-card__media" style="background-image: url('{{post.thumb}}');"></figure>
+							<div class="c-card__title u-pad-2 u-pad-t3">
+								<h3 class="color--white">{{ post.title }}</h3>
+							</div>
+							<div class="c-card__actions u-pad-1 u-align-right">
+								<a class="c-dialog-btn u-medium u-uppercase" href="{{ post.url }}">Read</a>
+							</div>
+						</div>
+				{% endfor %}
+
+		</ul>
+		<div class="u-align-right">
+			<a class="c-btn" href="/blog">View More Articles</a>
 		</div>
 	</div>
-</article>
-
-<article class="block experience text--white">
-	<div class="grid home-section">
-		<div class="grid__col grid__col--4 experience__block">
-			<img class="experience__image" src="/assets/dist/img/rehabstudio.svg">
-			<h3 class="u-tight"><a class="text--white" href="http://rehabstudio.com">Rehabstudio</a></h3>
-			<h5 class="u-tight text--italic">Front-End Developer</h5>
-			<h5 class="u-tight"><em>2012</em></h5>
-		</div><!--
-		--><div class="grid__col grid__col--4 experience__block">
-			<img class="experience__image" src="/assets/dist/img/fmm.svg">
-			<h3 class="u-tight"><a class="text--white" href="http://rehabstudio.com">Fresh Made Media</a></h3>
-			<h5 class="u-tight text--italic">Developer</h5>
-			<h5 class="u-tight"><em>2014</em></h5>
-		</div><!--
-		--><div class="grid__col grid__col--4 experience__block">
-			<img class="experience__image" src="/assets/dist/img/flint.svg">
-			<h3 class="u-tight"><a class="text--white" href="http://flintstudios.co.uk.com">Flint Studios</a></h3>
-			<h5 class="u-tight text--italic">Front-End Developer</h5>
-			<h5 class="u-tight"><em>2015</em></h5>
-		</div>
-	</div>
-</article>
-
-<article class="block home-work">
-	<section class="grid">
-		<h3 class="title--section text--center">Work</h3>
-
-		<div class="projects">
-			<div class="grid__col grid__col--4 project">
-			<img src="/assets/dist/img/projects/centre.jpg">
-				<a class="text--h5" href="http://www.centrecourtshopping.co.uk/" target="_blank">Centre Court Shopping</a>
-				<div class="project__agency">With <a href="http://freshmademedia.co.uk">Fresh Made Media</a></div>
-			</div>
-
-			<div class="grid__col grid__col--4 project">
-				<img src="/assets/dist/img/projects/drop.jpg">
-				<a class="text--h5" href="http://www.freshmademedia.co.uk/work/get-drop" target="_blank">Drop Kitchen Scales</a>
-				<div class="project__agency">With <a href="http://freshmademedia.co.uk">Fresh Made Media</a></div>
-			</div>
-
-			<div class="grid__col grid__col--4 project">
-				<img src="/assets/dist/img/projects/jl.jpg">
-				<a class="text--h5" href="http://www.johannesleonardo.com" target="_blank">Johannes Leonardo</a>
-				<div class="project__agency">With <a href="http://rehabstudio.com">rehabstudio</a></div>
-			</div>
-
-			<div class="grid__col grid__col--4 project">
-				<img src="/assets/dist/img/projects/tourbus.jpg">
-				<a class="text--h5" href="http://rehabstudio.com/projects/red-bull-tour-bus" target="_blank">Red Bull Tour Bus</a>
-				<div class="project__agency">With <a href="http://rehabstudio.com">rehabstudio</a> for Red Bull</div>
-			</div>
-
-			<div class="grid__col grid__col--4 project">
-				<img src="/assets/dist/img/projects/wallace.jpg">
-				<a class="text--h5" href="http://rehabstudio.com/projects/christmas-hangouts" target="_blank">Hangout with the Family</a>
-				<div class="project__agency">With <a href="http://rehabstudio.com">rehabstudio</a> for Google</div>
-			</div>
-
-			<div class="grid__col grid__col--4 project">
-				<img src="/assets/dist/img/projects/memento.jpg">
-				<a class="text--h5" href="http://rehabstudio.com/projects/one-memento" target="_blank">One Memento</a>
-				<div class="project__agency">With <a href="http://rehabstudio.com">rehabstudio</a> + <a href="http://www.rbtcorp.com">Robot Corp</a></div>
-			</div>
-
-		</div>
-	</section>
-</article>
-
-<article class="block home-links">
-	<div class="grid">
-
-		<h3 class="title--section text--center">Articles and Links</h3>
-
-
-		        <ul class="mosaic js-masonry">
-		            <li class="text tile" style=
-		            "position: absolute; left: 0px; top: 0px;">
-		                <a href="/news/ad-age-huge-a-standout-agency" title=
-		                "Ad Age: Huge a Standout Agency">
-		                <div class="eyebrow">
-		                    <b>News</b> / 1.26.2015
-		                </div>
-
-		                <h4>Ad Age: Huge a Standout Agency</h4>
-		                <!-- <p>Model.Description</p> --></a>
-		            </li>
-
-		           
-
-		            <li class="text tile" style=
-		            "position: absolute; left: 640px; top: 0px;">
-		                <a href="/news/mediapost-names-huge-agency-of-the-year" title=
-		                "MediaPost Names Huge 'Agency of the Year.'">
-		                <div class="eyebrow">
-		                    <b>News</b> / 1.13.2015
-		                </div>
-
-		                <h4>MediaPost Names Huge 'Agency of the Year.'</h4>
-		                <!-- <p>Model.Description</p> --></a>
-		            </li>
-
-		           
-
-		            
-
-		            
-
-		            <li class="text tile" style=
-		            "position: absolute; left: 0px; top: 480px;">
-		                <a href=
-		                "/news/forrester-names-huge-a-strong-performer-in-innovation-agency-wave-report"
-		                title=
-		                "Huge a Strong Performer in Innovation Agency Wave Report. ">
-		                <div class="eyebrow">
-		                    <b>News</b> / 12.8.2014
-		                </div>
-
-		                <h4>Huge a Strong Performer in Innovation Agency Wave
-		                Report.</h4><!-- <p>Model.Description</p> --></a>
-		            </li>
-
-		            <li class="image tile" style=
-		            "position: absolute; left: 640px; top: 480px;">
-		                <a href="http://www.hugeinc.com/careers">
-		                <figure>
-		                    <img alt="" src=
-		                    "http://d249o6o0sttdia.cloudfront.net/~/media/images/mosaics/getrich%20(1).jpg?as=1&amp;t=635543608925793475">
-
-		                    <figcaption class="center">
-		                        <span>Join Huge.</span>
-		                    </figcaption>
-		                </figure></a>
-		            </li>
-
-		           
-
-		          
-
-		            <li class="image tile" style=
-		            "position: absolute; left: 640px; top: 800px;">
-		                <a href="http://www.instagram.com/hugeinc">
-		                <figure>
-		                    <img alt="" src=
-		                    "http://d249o6o0sttdia.cloudfront.net/~/media/images/mosaics/culture/instagram.jpg?as=1&amp;t=635228518600265045">
-
-		                    <figcaption class="center">
-		                        <span>@hugeinc on Instagram.</span>
-		                    </figcaption>
-		                </figure></a>
-		            </li>
-
-		          
-
-
-		            <li class="work tile" style=
-		            "position: absolute; left: 320px; top: 1280px;">
-		                <a href="/case-study/fgl">
-		                <figure>
-		                    <img alt="" src=
-		                    "http://d249o6o0sttdia.cloudfront.net/~/media/fglmosaic1.jpg?as=1&amp;t=635530463026553422">
-
-		                    <figcaption class="center">
-		                        <span>FGL Sports &amp; Sport Chek.</span>
-		                    </figcaption>
-		                </figure></a>
-		            </li>
-
-		            <li class="text tile" style=
-		            "position: absolute; left: 960px; top: 1280px;">
-		                <a href="/ideas/report/what-to-expect-relaunch" title=
-		                "What to Expect When You're Relaunching.">
-		                <div class="eyebrow">
-		                    <b>Ideas</b> / Report
-		                </div>
-
-		                <h4>What to Expect When You're Relaunching.</h4></a>
-		            </li>
-
-		            <li class="work tile" style=
-		            "position: absolute; left: 640px; top: 1440px;">
-		                <a href="/case-study/td-ameritrade">
-		                <figure>
-		                    <img alt="" src=
-		                    "http://d249o6o0sttdia.cloudfront.net/~/media/images/case%20study%20images/td%20ameritrade%20wo/sochitile.jpg?as=1&amp;t=635494660736439040">
-
-		                    <figcaption class="center">
-		                        <span>#itaddsup.</span>
-		                    </figcaption>
-		                </figure></a>
-		            </li>
-
-		            <li class="work tile" style=
-		            "position: absolute; left: 0px; top: 1600px;">
-		                <a href="/case-study/barneys">
-		                <figure>
-		                    <img alt="Barneys NY" src=
-		                    "http://d249o6o0sttdia.cloudfront.net/~/media/barneys_thumb.jpg?as=1&amp;t=635530462988957131">
-
-		                    <figcaption class="center">
-		                        <span>Barneys New York.</span>
-		                    </figcaption>
-		                </figure></a>
-		            </li>
-
-		            <li class="image tile" style=
-		            "position: absolute; left: 320px; top: 1600px;">
-		                <a href=
-		                "http://www.amazon.com/Users-Not-Customers-Determines-Business/dp/1591846315"
-		                target="_blank">
-		                <figure>
-		                    <img alt="" src=
-		                    "http://d249o6o0sttdia.cloudfront.net/~/media/images/mosaics/usersmosaic.jpg?as=1&amp;t=635232387907828631">
-
-		                    <figcaption class="center">
-		                        <span>Users, Not Customers by Aaron Shapiro.</span>
-		                    </figcaption>
-		                </figure></a>
-		            </li>
-
-		            <li class="work tile" style=
-		            "position: absolute; left: 640px; top: 1760px;">
-		                <a href="/case-study/looking4myself-presented-by-samsung">
-		                <figure>
-		                    <img alt="Samsung" src=
-		                    "http://d249o6o0sttdia.cloudfront.net/~/media/images/mosaics/work/samsung-thumb.jpg?as=1&amp;t=635230004521702464">
-
-		                    <figcaption class="center">
-		                        <span>Usher's 'Looking 4 Myself' presented by
-		                        Samsung.</span>
-		                    </figcaption>
-		                </figure></a>
-		            </li>
-		        </ul>
-	</div>
-</article>
+</section>

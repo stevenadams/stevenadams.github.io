@@ -1,0 +1,86 @@
+/*========================================
+=            Media/Breakpoint            =
+========================================*/
+
+    @mixin media($media-query) {
+        $breakpoint-found: false;
+
+        @each $breakpoint in $breakpoints {
+            $name: nth($breakpoint, 1);
+            $declaration: nth($breakpoint, 2);
+
+            @if $media-query == $name and $declaration {
+                $breakpoint-found: true;
+
+                @media only screen and #{$declaration} {
+                    @content;
+                }
+            }
+        }
+
+
+    }
+
+/*-----  End of Media/Breakpoint  ------*/
+
+
+/*===================================
+=            Placeholder            =
+===================================*/
+
+    @mixin placeholder() {
+        &::-webkit-input-placeholder {
+            @content;
+        }
+
+        &:-moz-placeholder { /* Firefox 18- */
+            @content;
+        }
+
+        &::-moz-placeholder {  /* Firefox 19+ */
+            @content;
+        }
+
+        &:-ms-input-placeholder {
+            @content;
+        }
+    }
+
+/*-----  End of Placeholder  ------*/
+
+
+/*===========================
+=            REM            =
+===========================*/
+
+    @mixin rem($property, $values...) {
+        $max: length($values);
+        $pxValues: '';
+        $remValues: '';
+
+        @for $i from 1 through $max {
+            $value: strip-units(nth($values, $i));
+            $pxValues: #{$pxValues + $value}px;
+
+            @if $i < $max {
+                    $pxValues: #{$pxValues + " "};
+            }
+        }
+
+        @for $i from 1 through $max {
+            $value: strip-units(nth($values, $i));
+            $remValues: #{$remValues + $value / strip-units($base-font-size)}rem;
+
+            @if $i < $max {
+                    $remValues: #{$remValues + " "};
+            }
+        }
+
+        #{$property}: $pxValues;
+        #{$property}: $remValues;
+    }
+
+/*-----  End of REM  ------*/
+
+
+

@@ -1,0 +1,15 @@
+.title{
+	&--section{
+		margin-bottom: $space * 3.5;
+
+		&:after{
+			content: '';
+			position: relative;
+			display: block;
+			width: $space * 8;
+			padding-top: $space;
+			border-bottom: $space / 2 solid $main_color;
+		}
+	}
+}
+

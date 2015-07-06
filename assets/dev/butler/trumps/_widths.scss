@@ -1,0 +1,7 @@
+.u-width{
+	@for $i from 1 through 10{
+		&-#{10 * $i}{
+			width: 10% * $i;
+		}
+	}
+}

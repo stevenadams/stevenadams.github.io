@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "stevicons";
+  src: url('fonts/stevicons.eot');
+  src: url('fonts/stevicons.eot?#iefix') format('eot'),
+    url('fonts/stevicons.woff') format('woff'),
+    url('fonts/stevicons.ttf') format('truetype'),
+    url('fonts/stevicons.svg#stevicons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.stevicons:before {
+  display: inline-block;
+  font-family: "stevicons";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.stevicons-lg {
+  font-size: 1.3333333333333333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
+}
+.stevicons-2x { font-size: 2em; }
+.stevicons-3x { font-size: 3em; }
+.stevicons-4x { font-size: 4em; }
+.stevicons-5x { font-size: 5em; }
+.stevicons-fw {
+  width: 1.2857142857142858em;
+  text-align: center;
+}
+
+.stevicons-email:before { content: "\E001" }
+.stevicons-github:before { content: "\E002" }
+.stevicons-glyph08:before { content: "\E003" }
+.stevicons-glyph09:before { content: "\E004" }
+.stevicons-glyph10:before { content: "\E005" }
+.stevicons-instagram:before { content: "\E006" }
+.stevicons-linkedin:before { content: "\E007" }
+.stevicons-menu:before { content: "\E008" }
+.stevicons-rdio:before { content: "\E009" }
+.stevicons-twitter:before { content: "\E00A" }

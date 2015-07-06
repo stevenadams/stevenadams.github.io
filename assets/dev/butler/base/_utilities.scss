@@ -1,0 +1,23 @@
+.u-clearfix{
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+.u-display{
+	&--block{
+		display: block;
+	}
+}
+
+.u-tight{
+	margin: 0;
+}
+
+.u-text{
+	&--color{
+		color: $main_color; 
+	}
+}
