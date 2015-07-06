@@ -4,7 +4,7 @@ Thumbs.db
 
 # Frontend
 .sass-cache
-assets/dist
+#assets/dist
 node_modules
 npm-debug.log
 bower_components
