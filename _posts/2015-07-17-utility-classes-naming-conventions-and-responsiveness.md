@@ -1,8 +1,8 @@
 ---
-#layout: post
+layout: main
 title: 'Utility classes, naming conventions, and responsiveness'
-published:
-permalink: 
+published: false
+permalink: /blog/:title/
 category:
 categories:
 tags:
