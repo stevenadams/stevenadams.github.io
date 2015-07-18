@@ -1,7 +1,7 @@
 ---
 layout: main
 title: 'Utility classes, naming conventions, and responsiveness'
-published: true
+published: false
 permalink: /blog/:title/
 category:
 categories:
