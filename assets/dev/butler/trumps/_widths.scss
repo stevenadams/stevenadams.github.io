@@ -1,7 +1,172 @@
-.u-width{
-	@for $i from 1 through 10{
-		&-#{10 * $i}{
-			width: 10% * $i;
+/*------------------------------------*\
+	$WIDTHS
+\*------------------------------------*/
+/**
+ * Create our width classes, prefixed by the specified namespace.
+ */
+@mixin width-setup($namespace:"", $attribute:"", $suffix:"") {
+	$prefix: $grid__class-type + $namespace;
+
+
+	/**
+	 * Whole
+	 */
+	#{$prefix}#{full}#{$suffix} { #{$attribute}: 100%; }
+
+
+	/**
+	 * Halves
+	 */
+	#{$prefix}#{half}#{$suffix} { #{$attribute}: 50%; }
+
+
+	/**
+	 * Thirds
+	 */
+	#{$prefix+'1\\/3'+$suffix} { #{$attribute}: 33.333%; }
+	#{$prefix+'2\\/3'+$suffix} { #{$attribute}: 66.666%; }
+
+
+	/**
+	 * Quarters
+	 */
+	#{$prefix+'1\\/4'+$suffix} { #{$attribute}: 25%; }
+	#{$prefix+'2\\/4'+$suffix} { @extend #{$prefix}#{half}#{$suffix}; }
+	#{$prefix+'3\\/4'+$suffix} { #{$attribute}: 75%; }
+
+
+	/**
+	 * Fifths
+	 */
+	#{$prefix+'1\\/5'+$suffix} { #{$attribute}: 20%; }
+	#{$prefix+'2\\/5'+$suffix} { #{$attribute}: 40%; }
+	#{$prefix+'3\\/5'+$suffix} { #{$attribute}: 60%; }
+	#{$prefix+'4\\/5'+$suffix} { #{$attribute}: 80%; }
+
+
+	/**
+	 * Sixths
+	 */
+	#{$prefix+'1\\/6'+$suffix} { #{$attribute}: 16.666%; }
+	#{$prefix+'2\\/6'+$suffix} { @extend #{$prefix+'1\\/3'+$suffix}; }
+	#{$prefix+'3\\/6'+$suffix} { @extend #{$prefix}#{half}#{$suffix}; }
+	#{$prefix+'4\\/6'+$suffix} { @extend #{$prefix+'2\\/3'+$suffix}; }
+	#{$prefix+'5\\/6'+$suffix} { #{$attribute}: 83.333%; }
+
+
+	/**
+	 * Eighths
+	 */
+	#{$prefix+'1\\/8'+$suffix} { #{$attribute}: 12.5%; }
+	#{$prefix+'2\\/8'+$suffix} { @extend #{$prefix+'1\\/4'+$suffix}; }
+	#{$prefix+'3\\/8'+$suffix} { #{$attribute}: 37.5%; }
+	#{$prefix+'4\\/8'+$suffix} { @extend #{$prefix}#{half}#{$suffix}; }
+	#{$prefix+'5\\/8'+$suffix} { #{$attribute}: 62.5%; }
+	#{$prefix+'6\\/8'+$suffix} { @extend #{$prefix+'3\\/4'+$suffix}; }
+	#{$prefix+'7\\/8'+$suffix} { #{$attribute}: 87.5%; }
+
+
+	/**
+	 * Tenths
+	 */
+	#{$prefix+'1\\/10'+$suffix} { #{$attribute}: 10%; }
+	#{$prefix+'2\\/10'+$suffix} { @extend #{$prefix+'1\\/5'+$suffix}; }
+	#{$prefix+'3\\/10'+$suffix} { #{$attribute}: 30%; }
+	#{$prefix+'4\\/10'+$suffix} { @extend #{$prefix+'2\\/5'+$suffix}; }
+	#{$prefix+'5\\/10'+$suffix} { @extend #{$prefix}#{half}#{$suffix}; }
+	#{$prefix+'6\\/10'+$suffix} { @extend #{$prefix+'3\\/5'+$suffix}; }
+	#{$prefix+'7\\/10'+$suffix} { #{$attribute}: 70%; }
+	#{$prefix+'8\\/10'+$suffix} { @extend #{$prefix+'4\\/5'+$suffix}; }
+	#{$prefix+'9\\/10'+$suffix} { #{$attribute}: 90%; }
+
+
+	/**
+	 * Twelfths
+	 */
+	#{$prefix+'1\\/12'+$suffix} { #{$attribute}: 8.333%; }
+	#{$prefix+'2\\/12'+$suffix} { @extend #{$prefix+'1\\/6'+$suffix}; }
+	#{$prefix+'3\\/12'+$suffix} { @extend #{$prefix+'1\\/4'+$suffix}; }
+	#{$prefix+'4\\/12'+$suffix} { @extend #{$prefix+'1\\/3'+$suffix}; }
+	#{$prefix+'5\\/12'+$suffix} { #{$attribute}: 41.666% }
+	#{$prefix+'6\\/12'+$suffix} { @extend #{$prefix}#{half}#{$suffix}; }
+	#{$prefix+'7\\/12'+$suffix} { #{$attribute}: 58.333%; }
+	#{$prefix+'8\\/12'+$suffix} { @extend #{$prefix+'2\\/3'+$suffix}; }
+	#{$prefix+'9\\/12'+$suffix} { @extend #{$prefix+'3\\/4'+$suffix}; }
+	#{$prefix+'10\\/12'+$suffix} { @extend #{$prefix+'5\\/6'+$suffix}; }
+	#{$prefix+'11\\/12'+$suffix} { #{$attribute}: 91.666%; }
+}
+
+
+/**
+ * Our responsive classes, if we have enabled them.
+ */
+@if $responsive {
+
+	@each $name in $breakpoint-has-widths {
+		@include media($name) {
+		   @include width-setup("u-width-", "width", '--\\@'+$name);
 		}
 	}
+
+}@else{
+		@include width-setup('u-width','width');
+	}
+
+
+/*------------------------------------*\
+	$PUSH
+\*------------------------------------*/
+/**
+ * Push classes, to move grid items over to the right by certain amounts.
+ */
+
+@if $grid__push-classes {
+
+	/**
+	 * Not a particularly great selector, but the DRYest way to do things.
+	 */
+	[class*="u-push-"] { position:relative; }
+
+	@if $responsive {
+		@each $name in $breakpoint-has-widths {
+			@include media($name) {
+				@include width-setup('u-push','left','--\\@'+$name);
+			}
+		}
+	}@else{
+		@include width-setup('u-push','left');
+	}
+
+}
+
+
+
+
+
+/*------------------------------------*\
+	$PULL
+\*------------------------------------*/
+/**
+ * Pull classes, to move grid items back to the left by certain amounts.
+ */
+
+@if $grid__pull-classes {
+
+	/**
+	 * Not a particularly great selector, but the DRYest way to do things.
+	 */
+	[class*="u-pull-"] { position:relative; }
+
+
+
+	@if $responsive {
+		@each $name in $breakpoint-has-widths {
+			@include media($name) {
+				@include width-setup('u-pull','right','--\\@'+$name);
+			}
+		}
+	}@else{
+		@include width-setup('u-pull','right');
+	}
+
 }
