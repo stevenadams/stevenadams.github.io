@@ -1,7 +1,7 @@
 ---
 layout: main
 title: 'Utility classes, naming conventions, and responsiveness'
-published: false
+published: true
 permalink: /blog/:title/
 category:
 categories:
@@ -28,22 +28,23 @@ The solution that Harry suggested was to use modifier suffixes for the breakpoin
 
 The generation of these classes is relatively easy using Sass.
 
+
 	    @mixin media($media-query) {
-        $breakpoint-found: false;
+            $breakpoint-found: false;
 
-        @each $breakpoint in $breakpoints {
-        	$name: nth($breakpoint, 1);
-            $declaration: nth($breakpoint, 2);
+            @each $breakpoint in $breakpoints {
+            	$name: nth($breakpoint, 1);
+                $declaration: nth($breakpoint, 2);
 
-            @if $media-query == $name and $declaration {
-                $breakpoint-found: true;
+                @if $media-query == $name and $declaration {
+                    $breakpoint-found: true;
 
-                @media only screen and #{$declaration} {
-                    @content;
+                    @media only screen and #{$declaration} {
+                        @content;
+                    }
                 }
             }
         }
-    }
     
 	$breakpoints: (
     	's' '(max-width: 480px)',
