@@ -8,9 +8,20 @@
 
 <body>
 
-{% include navigation.html %}
+{% include header.html %}
 
-{{content}}
+<div class="o-wrapper">
+	<div class="o-grid">
+		<section class="o-grid__item u-width-3/4--@xl">
+			{{content}}
+		</section><!--
+		--><aside class="o-grid__item u-width-1/4--@xl">
+
+		</aside>
+	</div>
+</div>
+
+
 
 {% include footer.html %}
 
