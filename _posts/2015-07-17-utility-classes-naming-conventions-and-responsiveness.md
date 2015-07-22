@@ -1,16 +1,14 @@
 ---
-layout: main
-title: 'Utility classes, naming conventions, and responsiveness'
+layout: post-single
+title: 'Utility classes and responsiveness'
 published: true
-permalink: /blog/:title/
-category:
+permalink: /blog/utility-classes-and-responsiveness
+category: css
 categories:
 tags:
 #thumb: /assets/articles/file.jpg
 thumb: https://ununsplash.imgix.net/photo-1422479516648-9b1f0b6e8da8?dpr=2&fit=crop&fm=jpg&h=725&q=75&w=1050
 ---
-
-# Utility classes, naming conventions, and responsiveness
 
 This is my first blog post so you'll forgive me if it's all over the place. Ever since I got into front-end I've been meaning to start a blog. Not so much a case of "guys my opinion is gold, y'all are doing it wrong" as it is "here is something I thought was cool, if you didn't know now you know".
 
@@ -29,42 +27,42 @@ The solution that Harry suggested was to use modifier suffixes for the breakpoin
 The generation of these classes is relatively easy using Sass.
 
 
-	    @mixin media($media-query) {
-            $breakpoint-found: false;
+    @mixin media($media-query) {
+        $breakpoint-found: false;
 
-            @each $breakpoint in $breakpoints {
-            	$name: nth($breakpoint, 1);
-                $declaration: nth($breakpoint, 2);
+        @each $breakpoint in $breakpoints {
+        	$name: nth($breakpoint, 1);
+            $declaration: nth($breakpoint, 2);
 
-                @if $media-query == $name and $declaration {
-                    $breakpoint-found: true;
+            @if $media-query == $name and $declaration {
+                $breakpoint-found: true;
 
-                    @media only screen and #{$declaration} {
-                        @content;
-                    }
+                @media only screen and #{$declaration} {
+                    @content;
                 }
             }
         }
+    }
     
 	$breakpoints: (
-    	's' '(max-width: 480px)',
-    	'm' '(min-width: 481px) and (max-width: 1023px)',
-    	'l' '(max-width: 1023px)',
-    	'xl' '(min-width: 1024px)'
+        's' '(max-width: 480px)',
+        'm' '(min-width: 481px) and (max-width: 1023px)',
+        'l' '(max-width: 1023px)',
+        'xl' '(min-width: 1024px)'
 	) !default;
 
 	$space: 8px;
 
 	@each $break in $breakpoints{
-    	$bp: nth($break, 1);
+        $bp: nth($break, 1);
 
-    	@include media($bp){
+        @include media($bp){
         	@for $i from 0 through 10{
-            	.u-space-l#{$i}--\@#{$bp}{
+                .u-space-l#{$i}--\@#{$bp}{
                 	margin-left: ($space * $i);
-            	}
-        	}
-    	}
+                }
+            }
+        }
 	}
 
 Now we can add our modifier selectors to elements to dictate the value of selector attributes at different breakpoints. This is most useful when used with utility selectors the generally only have one attribute. 

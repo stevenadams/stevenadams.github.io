@@ -109,7 +109,7 @@
 	}
 
 }@else{
-		@include width-setup('u-width','width');
+		@include width-setup('u-width-','width');
 	}
 
 
@@ -130,11 +130,11 @@
 	@if $responsive {
 		@each $name in $breakpoint-has-widths {
 			@include media($name) {
-				@include width-setup('u-push','left','--\\@'+$name);
+				@include width-setup('u-push-','left','--\\@'+$name);
 			}
 		}
 	}@else{
-		@include width-setup('u-push','left');
+		@include width-setup('u-push-','left');
 	}
 
 }
@@ -162,11 +162,11 @@
 	@if $responsive {
 		@each $name in $breakpoint-has-widths {
 			@include media($name) {
-				@include width-setup('u-pull','right','--\\@'+$name);
+				@include width-setup('u-pull-','right','--\\@'+$name);
 			}
 		}
 	}@else{
-		@include width-setup('u-pull','right');
+		@include width-setup('u-pull-','right');
 	}
 
 }

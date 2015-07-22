@@ -11,8 +11,25 @@ $palettes: (
 		2: #f5f5f5
 	),
 
+	'black':(
+		1: #0e0e0e
+	),
+
 	'text':(
 		1: #212121
 	)
 
+);
+
+$social-colors: (
+	github: #4183c4,
+	instagram: #3f729b,
+	linkedin: #0077b5,
+	rdio: #007dc3,
+	twitter: #55acee
+);
+
+$category-colors: (
+	css: #ec407a,
+	team: #26c6da
 );
