@@ -108,22 +108,24 @@
 /*-----  End of Themes  ------*/
 
 
-/*==============================
-=            Trumps            =
-==============================*/
+/*=================================
+=            Utilities            =
+=================================*/
 
-	@import 'trumps/clearfix';
-	@import 'trumps/text-columns';
-	@import 'trumps/colors';
-	@import 'trumps/display';
-	@import 'trumps/floats';
-	@import 'trumps/links';
-	@import 'trumps/spacing';
-	@import 'trumps/padding';
-	@import 'trumps/type';
-	@import 'trumps/widths';
-	@import 'trumps/vertical';
-	@import 'trumps/center';
-	@import 'trumps/lists';
+	@import 'utilities/clearfix';
+	@import 'utilities/text-columns';
+	@import 'utilities/colors';
+	@import 'utilities/display';
+	@import 'utilities/floats';
+	@import 'utilities/links';
+	@import 'utilities/spacing';
+	@import 'utilities/padding';
+	@import 'utilities/weights';
+	@import 'utilities/widths';
+	@import 'utilities/valign';
+	@import 'utilities/talign';
+	@import 'utilities/center';
+	@import 'utilities/lists';
 
-/*-----  End of Trumps  ------*/
+/*-----  End of Utilities  ------*/
+
