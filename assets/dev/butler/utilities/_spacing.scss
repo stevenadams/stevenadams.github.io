@@ -1,0 +1,35 @@
+.u-space-t{
+	@for $i from 0 through 16{
+		&#{$i}{
+			margin-top: $space * $i;
+		}
+	}
+}
+
+.u-space-r{
+	@for $i from 0 through 16{
+		&#{$i}{
+			margin-right: $space * $i;
+		}
+	}
+}
+
+.u-space-b{
+	@for $i from 0 through 16{
+		&#{$i}{
+			margin-bottom: $space * $i;
+		}
+	}
+}
+
+.u-space-l{
+	@for $i from 0 through 16{
+		&#{$i}{
+			margin-left: $space * $i;
+		}
+	}
+}
+
+.u-unspace{
+	margin: 0;
+}
