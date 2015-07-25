@@ -65,6 +65,18 @@
 	#{$prefix+'6\\/8'+$suffix} { @extend #{$prefix+'3\\/4'+$suffix}; }
 	#{$prefix+'7\\/8'+$suffix} { #{$attribute}: 87.5%; }
 
+	/**
+	 * Nineths
+	 */
+	#{$prefix+'1\\/9'+$suffix}{ #{$sttribute}: 11.111%; }
+	#{$prefix+'2\\/9'+$suffix}{ #{$sttribute}: 22.222%; }
+	#{$prefix+'3\\/9'+$suffix}{ @extend #{$prefix+'1\\/3'+$suffix}; }
+	#{$prefix+'4\\/9'+$suffix}{ #{$sttribute}: 44.444%; }
+	#{$prefix+'5\\/9'+$suffix}{ #{$sttribute}: 55.556%; }
+	#{$prefix+'6\\/9'+$suffix}{ @extend #{$prefix+'2\\/3'+$suffix}; }
+	#{$prefix+'7\\/9'+$suffix}{ #{$sttribute}: 77.778%; }
+	#{$prefix+'8\\/9'+$suffix}{ #{$sttribute}: 88.889%; }
+
 
 	/**
 	 * Tenths
@@ -109,7 +121,7 @@
 	}
 
 }@else{
-		@include width-setup('u-width-','width');
+		@include width-setup('u-width','width');
 	}
 
 
@@ -130,11 +142,11 @@
 	@if $responsive {
 		@each $name in $breakpoint-has-widths {
 			@include media($name) {
-				@include width-setup('u-push-','left','--\\@'+$name);
+				@include width-setup('u-push','left','--\\@'+$name);
 			}
 		}
 	}@else{
-		@include width-setup('u-push-','left');
+		@include width-setup('u-push','left');
 	}
 
 }
@@ -162,11 +174,11 @@
 	@if $responsive {
 		@each $name in $breakpoint-has-widths {
 			@include media($name) {
-				@include width-setup('u-pull-','right','--\\@'+$name);
+				@include width-setup('u-pull','right','--\\@'+$name);
 			}
 		}
 	}@else{
-		@include width-setup('u-pull-','right');
+		@include width-setup('u-pull','right');
 	}
 
 }
