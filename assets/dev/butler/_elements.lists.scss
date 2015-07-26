@@ -1,0 +1,13 @@
+ul {
+    list-style: circle outside;
+}
+
+li > {
+
+    ul,
+    ol {
+        margin-left: 2 * $space;
+        margin-bottom: 0;
+    }
+
+}

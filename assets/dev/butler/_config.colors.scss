@@ -1,0 +1,41 @@
+$palettes: (
+
+	'red':(
+		1: #f73b3b,
+		2: #e02424,
+		3: #cd1d1d
+	),
+
+	'white':(
+		1: #ffffff,
+		2: #f5f5f5
+	),
+
+	'black':(
+		1: #0e0e0e
+	),
+
+	'text':(
+		1: #212121
+	),
+
+	'divider':(
+		1: rgba(0,0,0,0.12)
+	)
+
+);
+
+$social-colors: (
+	github: #4183c4,
+	instagram: #3f729b,
+	linkedin: #0077b5,
+	rdio: #007dc3,
+	twitter: #55acee
+);
+
+$category-colors: (
+	css: #ea7a9e,
+	team: #7a9eea,
+	topic: #2891C3,
+	other: #71B663
+);

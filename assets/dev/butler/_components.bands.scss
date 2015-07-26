@@ -1,0 +1,33 @@
+.c-band{
+	width: 100%;
+}
+
+@each $palette, $color in $palettes {
+	.c-band--#{$palette}{
+		background-color: palette($palette);
+
+		@if(palette($palette, 2)){
+			&2{
+				background-color: palette($palette, 2);
+			}
+		}
+
+		@if(palette($palette, 3)){
+			&3{
+				background-color: palette($palette, 3);
+			}
+		}
+	}
+}
+
+/*Animation Prefs*/
+@keyframes pulse {
+      0% {background-color: #ea7a9e;}
+     33% {background-color: #7a9eea;}
+     66% {background-color: #2891C3;}
+     100% {background-color: #71B663;}
+}
+
+.c-band--pulsing{
+	animation: pulse 20s infinite alternate;
+}

@@ -1,0 +1,121 @@
+#{$grid__class-type}o-grid {
+    list-style:none;
+    margin:0;
+    padding:0;
+    margin-right: (($grid__gutter / 2) * -1);
+    margin-left: (($grid__gutter / 2) * -1);
+    // padding-right: $grid__gutter / 2;
+    // padding-left: $grid__gutter / 2;
+}
+
+
+    #{$grid__class-type}o-grid__item {
+        display: inline-block;
+        padding-right: $grid__gutter / 2;
+        padding-left: $grid__gutter / 2;
+        vertical-align:top;
+        @if $responsive__mobile-first {
+            width:100%;
+        }
+    }
+
+
+/**
+ * Reversed grids allow you to structure your source in the opposite order to
+ * how your rendered layout will appear. Extends `.grid`.
+ */
+#{$grid__class-type}o-grid--rev {
+    direction:rtl;
+    text-align:left;
+
+    > #{$grid__class-type}o-grid__item {
+        direction:ltr;
+        text-align:left;
+    }
+}
+
+
+/**
+ * Gutterless grids have all the properties of regular grids, minus any spacing.
+ * Extends `.grid`.
+ */
+#{$grid__class-type}o-grid--full {
+    padding-right: 0;
+    padding-left: 0;
+
+    > #{$grid__class-type}o-grid__item {
+        padding: 0;
+    }
+}
+
+
+/**
+ * Align the entire grid to the right. Extends `.grid`.
+ */
+#{$grid__class-type}o-grid--right {
+    text-align: right;
+
+    > #{$grid__class-type}o-grid__item {
+        text-align: left;
+    }
+}
+
+
+/**
+ * Centered grids align grid items centrally without needing to use push or pull
+ * classes. Extends `.grid`.
+ */
+#{$grid__class-type}o-grid--center {
+    text-align: center;
+
+    > #{$grid__class-type}o-grid__item {
+        text-align: left;
+    }
+}
+
+
+/**
+ * Align grid cells vertically (`.grid--middle` or `.grid--bottom`). Extends
+ * `.grid`.
+ */
+#{$grid__class-type}o-grid--middle {
+
+    > #{$grid__class-type}o-grid__item {
+        vertical-align: middle;
+    }
+}
+
+#{$grid__class-type}o-grid--bottom {
+
+    > #{$grid__class-type}o-grid__item {
+        vertical-align: bottom;
+    }
+}
+
+
+/**
+ * Create grids with narrower gutters. Extends `.grid`.
+ */
+#{$grid__class-type}o-grid--narrow {
+    padding-right: $grid__gutter / 4;
+    padding-left: $grid__gutter / 4;
+
+    > #{$grid__class-type}o-grid__item {
+        padding-right: $grid__gutter / 4;
+        padding-left: $grid__gutter / 4;
+    }
+}
+
+
+/**
+ * Create grids with wider gutters. Extends `.grid`.
+ */
+#{$grid__class-type}o-grid--wide {
+    padding-right: $grid__gutter;
+    padding-left: $grid__gutter;
+
+    > #{$grid__class-type}o-grid__item {
+        padding-right: $grid__gutter;
+        padding-left: $grid__gutter;
+    }
+}

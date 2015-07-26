@@ -1,0 +1,10 @@
+.c-page-head{
+	position: relative;
+	padding: ($space * 10) ($space * 3) ($space * 10);
+	// background: url('/assets/dist/img/devices.svg') no-repeat center; 
+}
+
+	.c-page-head__title{
+		@include rem(font-size, 48px);
+		@include rem(line-height, 56px);
+	}

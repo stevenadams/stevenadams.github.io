@@ -1,0 +1,138 @@
+.c-page-nav{
+	// z-index: $z-index-7--nav;
+	// position: absolute;
+	display: block;
+	width: 100%;
+	padding: ($space * 2) 0;
+
+	color: palette('white');
+}
+
+	.c-page-nav__toggle{
+		background: palette('red');
+		border-radius: 50%;
+		border: none;
+		box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.12), 0px 8px 8px 0px rgba(0,0,0,0.24);
+		display: none;
+		transition: box-shadow 0.4s ease-in-out;
+		font-size: 24px;
+		font-size: rem(24px);
+		height: $space * 5;
+		padding: 0;
+		position: fixed;
+		right: $space * 3;
+		vertical-align: middle;
+		width: $space * 5;
+		z-index: $z-index-7--nav;
+
+		&:before{
+			display: block;
+		}
+
+		.is-active &{
+			background: transparent;
+			box-shadow: none;
+			color: palette('text');
+		}
+
+		&:hover{
+			box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.12), 0px 16px 16px 0px rgba(0,0,0,0.24);
+		}
+	
+		@include media(s){
+			display: inline-block;
+		}
+	}
+
+	.c-page-nav__menu{
+		display: inline-block;
+		// vertical-align: middle;
+		// float: right;
+		position: absolute;
+		margin: 0;
+		padding: 0;
+		right: ($space * 4);
+		top: 0;
+
+		list-style: none;
+
+		@include media(s){
+			background: palette('white');
+			box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 2px 0px rgba(0,0,0,0.24);
+			color: palette('text');
+			max-height: 0;
+			max-width: 0;
+			overflow: hidden;
+			position: fixed;
+			right: $space * 2;
+			top: $space * 2;
+			transition: max-height 0.4s ease-in-out, max-width 0.4s ease-in-out;
+			width: 80%;
+
+			.is-active &{
+				max-height: $space * 26;
+				max-width: $space * 26;
+			}
+		}
+	}
+
+	.c-page-nav__item{
+		position: relative;
+		display: block;
+		float: left;
+		margin-right: $space * 3;
+		padding: 0;
+		line-height: 1em;
+		text-transform: uppercase;
+
+		&:last-child{
+			margin-right: 0;
+		}
+
+		@include media(s){
+			float: none;
+			margin: 0;
+		}
+	}
+
+	.c-page-nav__link{	
+		display: block;
+		padding: ($space * 1.5) 0;
+		line-height: 1;
+		color: inherit;
+		text-decoration: none;
+		transition: border 0.4s ease-in-out;
+
+		@include media(s){
+			padding: $space * 2;
+
+			&:after{
+				display: none;
+			}
+
+			&:hover{
+				background: palette('white', 2);
+			}
+		}
+
+		&:after{
+			position: absolute;
+			bottom: $space * -2;
+			left: 0;
+			width: 100%;
+			height: $space / 2;
+			background: palette('white');
+			content: '';
+			opacity: 0;
+			transition: opacity 0.4s ease-in-out, bottom 0.4s ease-in-out;
+		}
+
+		&:hover{
+			color: inherit;
+
+			&:after{
+				opacity: 1;
+				bottom: 0;
+			}
+		}
+	}

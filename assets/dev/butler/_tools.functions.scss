@@ -1,0 +1,64 @@
+/*===================================
+=            Strip Units            =
+===================================*/
+
+	@function strip-units($num) {
+		@return $num / ($num * 0 + 1);
+	}
+
+/*-----  End of Strip Units  ------*/
+
+
+
+
+/*===============================
+=            Palette            =
+===============================*/
+
+	@function palette($palette, $tone: 1) {
+		@return map-get(map-get($palettes, $palette), $tone);
+	}
+
+		/**
+		*
+		* Usage
+
+			color: palette(red);  //  Will use the base tone for red by default
+			color: palette(purple, light);  //  Will use the light tone for red
+
+		*
+		**/
+
+/*-----  End of Pallete  ------*/
+
+
+
+
+/*=============================
+=            Round            =
+=============================*/
+
+	@function dec-round($number, $digits: 0) {
+	    $n: 1;
+	    // $number must be a number
+	    @if type-of($number) != number {
+	        @warn '#{ $number } is not a number.';
+	        @return $number;
+	    }
+	    // $digits must be a unitless number
+	    @if type-of($digits) != number {
+	        @warn '#{ $digits } is not a number.';
+	        @return $number;
+	    } @else if not unitless($digits) {
+	        @warn '#{ $digits } has a unit.';
+	        @return $number;
+	    }
+	    @for $i from 1 through $digits {
+	        $n: $n * 10;
+	    }
+
+	    @return round($number * $n) / $n;
+
+	}
+
+/*-----  End of Round  ------*/

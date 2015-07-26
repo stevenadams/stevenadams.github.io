@@ -1,0 +1,3 @@
+defaults:
+
+permalink: /articles/:categories/:title
