@@ -4,7 +4,7 @@ title: Home
 ---
 {% include header.html %}
 
-<div class="c-band c-band--white">
+<div class="c-band c-band--white u-border-bottom" id="about">
 	<section class="o-wrapper u-pad-t4 u-pad-b4">
 		<h1 class="u-space-b4 u-align-center">About</h1>
 		<div class="o-grid o-grid--center">
@@ -21,13 +21,13 @@ title: Home
 			</div>
 
 			<p class="o-grid__item u-width-2/3--@xl u-text-columns u-text-columns--2">
-				A Front-End Developer out of the UK, with over 2 years experience building user interfaces for PHP, Python, Ruby, and C# projects. Focusing on scalability, speed, and user experience. Fascinated by new technologies and methodologies such as responsive design, task runners, and prototyping. I love working with agencies and helping to improve their front-end workflow. My everyday toolset includes Sass, JavaScript, HTML, Gulp, Sketch App, and Photoshop. I have a First Class Honours Degree in Interactive Multimedia Design from the University of Ulster. When I get some free time I can usually be found at the gym, behind a drum kit, or just relaxing.
+				Hi, I'm Steven. A Front-End Developer out of the UK, with over 2 years experience building user interfaces for PHP, Python, Ruby, and C# projects. Focusing on scalability, speed, and user experience. Fascinated by new technologies and methodologies such as responsive design, task runners, and prototyping. I love working with agencies and helping to improve their front-end workflow. My everyday toolset includes Sass, JavaScript, HTML, Gulp, Sketch App, and Photoshop. I have a First Class Honours Degree in Interactive Multimedia Design from the University of Ulster. When I get some free time I can usually be found at the gym, behind a drum kit, or just relaxing.
 			</p>
 		</div>
 	</section>
 </div>
 
-<section class="c-band c-band--white2 u-pad-t4 u-pad-b4">
+<section class="u-border-bottom u-pad-t4 u-pad-b4">
 	<div class="o-wrapper">
 		<h1 class="u-space-b4 u-align-center">Experience</h1>
 
@@ -48,7 +48,7 @@ title: Home
 	</div>
 </section>
 
-<section class="c-band c-band--white u-pad-t4">
+<section class="c-band c-band--white u-border-bottom u-pad-t4">
 	<div class="o-wrapper u-align-center">
 		<img class="u-pad-r4 u-pad-b4 u-pad-l4 u-inline-block u-valign-middle" src="assets/dist/img/logos/google.svg">
 		<img class="u-pad-r4 u-pad-b4 u-pad-l4 u-inline-block u-valign-middle" src="assets/dist/img/logos/redbull.svg">
@@ -62,7 +62,7 @@ title: Home
 </section>
 
 
-<section class="c-band c-band--white2">
+<section class="c-band c-band--white2" id="blog">
 	<div class="o-wrapper u-pad-t4 u-pad-b4">
 		<h1 class="u-space-b4 u-align-center">Articles</h1>
 		<ul class="o-grid o-grid--center">
@@ -78,7 +78,7 @@ title: Home
 								<h3 class="color--white">{{ post.title }}</h3>
 							</div>
 							<div class="c-card__actions u-pad-1">
-								<a class="c-dialog-btn t-text-color u-medium u-uppercase" href="{{ post.url }}">Read</a>
+								<a class="c-dialog-btn t-text-color u-weight-medium u-case-upper" href="{{ post.url }}">Read</a>
 							</div>
 						</div>
 				{% endfor %}

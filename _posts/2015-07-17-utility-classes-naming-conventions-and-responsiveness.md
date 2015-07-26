@@ -2,7 +2,6 @@
 layout: post-single
 title: 'Utility classes and responsiveness'
 published: true
-permalink: /blog/utility-classes-and-responsiveness
 category: css
 categories:
 tags:
