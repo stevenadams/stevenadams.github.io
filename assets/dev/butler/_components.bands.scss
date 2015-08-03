@@ -22,9 +22,9 @@
 
 /*Animation Prefs*/
 @keyframes pulse {
-      0% {background-color: palette('green');}
-     50% {background-color: darken(palette('green'), 5%);}
-     100% {background-color: darken(palette('green'), 10%);}
+      0% {background-color: palette('blue');}
+     50% {background-color: darken(palette('blue'), 5%);}
+     100% {background-color: darken(palette('blue'), 10%);}
 }
 
 .c-band--pulsing{

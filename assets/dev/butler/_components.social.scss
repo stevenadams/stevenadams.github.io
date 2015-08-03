@@ -24,7 +24,7 @@
 	.c-social__link--{
 		@each $profile, $color in $social-colors {
 			&#{$profile}{
-				color: $color;
+				// color: $color;
 
 				&:hover{ color: $color; }
 			}

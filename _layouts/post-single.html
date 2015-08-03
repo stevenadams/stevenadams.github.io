@@ -7,20 +7,20 @@
 {% include head.html %}
 
 <body class="t-{{page.category}}">
-	<div class="u-border-bottom u-width-full u-space-b4">
+	<div class="u-background-white u-border-bottom u-width-full u-space-b4">
 		{% include navigation.html %}
 	</div>
 
 	<div class="o-wrapper">
 		<div class="o-grid">
-			<section class="o-grid__item s-post u-width-3/5--@xl">
+			<section class="o-grid__item s-post u-width-3/5--@xl u-space-b10">
 				<time class="post__date" datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%-d %B, %Y" }}</time>
 				<h1>{{ page.title }}</h1>
 
 				{{content}}
 			</section><!--
 			--><aside class="o-grid__item u-width-3/10--@xl u-push-1/10--@xl">
-				<div class="u-background-white2 u-border u-pad-4 u-align-center">
+				<div class="u-background-white u-border u-pad-4 u-align-center">
 					<figure>
 						<img class="o-grid__item u-width-2/3--@xl u-space-b4" src="/assets/dist/img/avatar@2x.png" alt="Steven Adams">
 					</figure>
