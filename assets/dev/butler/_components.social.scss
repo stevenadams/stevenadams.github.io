@@ -10,8 +10,8 @@
 }
 
 	.c-social__link{
-		color: palette('white');
-		margin-right: 8px;
+		// color: palette('white');
+		margin-right: $space;
 		position: relative;
 		text-decoration: none;
 		transition: color 0.4s ease-in-out;

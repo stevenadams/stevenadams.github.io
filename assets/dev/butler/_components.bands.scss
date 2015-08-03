@@ -22,12 +22,11 @@
 
 /*Animation Prefs*/
 @keyframes pulse {
-      0% {background-color: #ea7a9e;}
-     33% {background-color: #7a9eea;}
-     66% {background-color: #2891C3;}
-     100% {background-color: #71B663;}
+      0% {background-color: palette('green');}
+     50% {background-color: darken(palette('green'), 5%);}
+     100% {background-color: darken(palette('green'), 10%);}
 }
 
 .c-band--pulsing{
-	animation: pulse 20s infinite alternate;
+	animation: pulse 10s infinite alternate;
 }

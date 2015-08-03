@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg width="104px" height="104px" viewBox="0 0 104 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
-    <title>rehabstudio</title>
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape-3</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="Desktop-HD" sketch:type="MSArtboardGroup" transform="translate(-298.000000, -620.000000)" fill="#212121">
-            <g id="Group" sketch:type="MSLayerGroup" transform="translate(0.000000, 576.000000)">
-                <g id="Rehabstudio-2-+-rehabstudio-+-FRONT-END-DEVELOPER-+-2012" transform="translate(261.000000, 44.000000)" sketch:type="MSShapeGroup">
-                    <g id="Rehabstudio-2-+-rehabstudio" transform="translate(21.000000, 0.000000)">
-                        <g id="rehabstudio" transform="translate(16.000000, 0.000000)">
-                            <g id="Page-1">
-                                <g id="Shape-3-+-Shape-2">
-                                    <path d="M39.263958,39.271874 L-1.13686838e-13,39.271874 L-1.13686838e-13,64.752147 L39.263958,64.752147 L39.263958,103.960147 L64.7584252,103.960147 L64.7584252,64.752147 L103.938856,64.752147 L103.938856,39.271874 L64.7584252,39.271874 L64.7584252,4.97379915e-14 L39.263958,4.97379915e-14 L39.263958,39.271874 Z" id="Shape-3"></path>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="rehabstudio" sketch:type="MSLayerGroup" transform="translate(-1.000000, 0.000000)" fill="#000000" opacity="0.54">
+            <g id="Welcome" sketch:type="MSShapeGroup">
+                <g id="Desktop-HD">
+                    <g id="Group">
+                        <g id="Rehabstudio-2-+-rehabstudio-+-FRONT-END-DEVELOPER-+-2012">
+                            <g id="Rehabstudio-2-+-rehabstudio">
+                                <g id="rehabstudio">
+                                    <g id="Page-1">
+                                        <g id="Shape-3-+-Shape-2">
+                                            <path d="M40.263958,39.271874 L1,39.271874 L1,64.752147 L40.263958,64.752147 L40.263958,103.960147 L65.7584252,103.960147 L65.7584252,64.752147 L104.938856,64.752147 L104.938856,39.271874 L65.7584252,39.271874 L65.7584252,4.97379915e-14 L40.263958,4.97379915e-14 L40.263958,39.271874 L40.263958,39.271874 Z" id="Shape-3"></path>
+                                        </g>
+                                    </g>
                                 </g>
                             </g>
                         </g>

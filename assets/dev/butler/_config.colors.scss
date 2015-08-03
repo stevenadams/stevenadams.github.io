@@ -1,9 +1,8 @@
 $palettes: (
 
-	'red':(
-		1: #f73b3b,
-		2: #e02424,
-		3: #cd1d1d
+	'green':(
+		1: #2ed16f,
+		2: darken(#2ed16f, 8%)
 	),
 
 	'white':(
@@ -16,7 +15,9 @@ $palettes: (
 	),
 
 	'text':(
-		1: #212121
+		1: rgba(0,0,0,0.87),
+		2: rgba(0,0,0,0.54),
+		3: rgba(0,0,0,0.38)
 	),
 
 	'divider':(
