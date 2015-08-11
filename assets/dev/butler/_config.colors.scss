@@ -1,8 +1,11 @@
+$highlight-color: #59C7AA;
+$highlight-color: #4DB2DA;
+
 $palettes: (
 
-	'blue':(
-		1: #6290C3,
-		2: darken(#6290C3, 8%)
+	'highlight':(
+		1: $highlight-color,
+		2: darken($highlight-color, 8%)
 	),
 
 	'white':(

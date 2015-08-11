@@ -20,13 +20,13 @@
 	}
 }
 
-/*Animation Prefs*/
-@keyframes pulse {
-      0% {background-color: palette('blue');}
-     50% {background-color: darken(palette('blue'), 5%);}
-     100% {background-color: darken(palette('blue'), 10%);}
-}
-
-.c-band--pulsing{
-	animation: pulse 10s infinite alternate;
-}
+// /*Animation Prefs*/
+// @keyframes pulse {
+//       0% {background-color: palette('blue');}
+//      50% {background-color: darken(palette('blue'), 5%);}
+//      100% {background-color: darken(palette('blue'), 10%);}
+// }
+//
+// .c-band--pulsing{
+// 	animation: pulse 10s infinite alternate;
+// }
