@@ -25,9 +25,8 @@ $grid__pull-classes: false !default;
  */
 $breakpoints: (
     's' '(max-width: 480px)',
-    'm' '(min-width: 481px) and (max-width: 1023px)',
-    'l' '(max-width: 1023px)',
-    'xl' '(min-width: 1024px)'
+    'm' '(max-width: 768px)',
+    'l' '(max-width: 1024px)'
 ) !default;
 
 
@@ -41,6 +40,6 @@ $breakpoints: (
  * Push and pull shall only be used if `$push` and/or `$pull` and `$responsive`
  * have been set to ‘true’.
  */
-$breakpoint-has-widths: ('s', 'm', 'l', 'xl') !default;
-$breakpoint-has-push:   ('s', 'm', 'l', 'xl') !default;
-$breakpoint-has-pull:   ('s', 'm', 'l', 'xl') !default;
+$breakpoint-has-widths: ('s', 'm', 'l') !default;
+$breakpoint-has-push:   ('s', 'm', 'l') !default;
+$breakpoint-has-pull:   ('s', 'm', 'l') !default;

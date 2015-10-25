@@ -114,6 +114,8 @@
  */
 @if $responsive {
 
+	@include width-setup('u-width','width');
+
 	@each $name in $breakpoint-has-widths {
 		@include media($name) {
 		   @include width-setup("u-width", "width", '--\\@'+$name);
@@ -121,8 +123,8 @@
 	}
 
 }@else{
-		@include width-setup('u-width','width');
-	}
+	@include width-setup('u-width','width');
+}
 
 
 /*------------------------------------*\
@@ -140,6 +142,9 @@
 	[class*="u-push-"] { position:relative; }
 
 	@if $responsive {
+
+		@include width-setup('u-push','left');
+
 		@each $name in $breakpoint-has-widths {
 			@include media($name) {
 				@include width-setup('u-push','left','--\\@'+$name);
@@ -172,6 +177,9 @@
 
 
 	@if $responsive {
+
+		@include width-setup('u-pull','right');
+
 		@each $name in $breakpoint-has-widths {
 			@include media($name) {
 				@include width-setup('u-pull','right','--\\@'+$name);

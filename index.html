@@ -7,22 +7,22 @@ title: Home
 <section class="o-wrapper u-pad-t6 u-pad-b8" id="about">
 
 		<p class="u-text-columns u-text-columns--2">
-			Hi, I'm Steven. A Front-End Engineer out of the UK, with over 2 years experience building user interfaces for PHP, Python, Ruby, and C# projects. Focusing on scalability, speed, and user experience. Fascinated by new technologies and methodologies such as responsive design, task runners, and prototyping. I love working with agencies and helping to improve their front-end workflow. My everyday toolset includes Sass, JavaScript, HTML, Gulp, Sketch App, and Photoshop. I have a First Class Honours Degree in Interactive Multimedia Design from the University of Ulster. When I get some free time I can usually be found at the gym, behind a drum kit, or just relaxing.
+			Hi, I'm Steven. A UI/UX Developer out of the UK, with over 2 years experience building user interfaces for PHP, Python, Ruby, and C# projects. Focusing on scalability, speed, and user experience. Fascinated by new technologies and methodologies such as responsive design, task runners, and prototyping. I love working with agencies and helping to improve their front-end workflow. My everyday toolset includes Sass, JavaScript, HTML, Gulp, Sketch App, and Photoshop. I have a First Class Honours Degree in Interactive Multimedia Design from the University of Ulster. When I get some free time I can usually be found at the gym, behind a drum kit, or just relaxing.
 		</p>
 
 </section>
 
 <section class="o-wrapper u-pad-b8">
 		<ul class="o-grid o-grid--center">
-			<li class="o-grid__item u-width-1/4--@xl u-align-center">
+			<li class="o-grid__item u-width-1/4 u-align-center">
 				<img class="u-space-b2" src="/assets/dist/img/rehabstudio.svg">
 				<h3><a href="http://rehabstudio.com">rehabstudio</a></h3>
 				<h4 class="u-color-text2 u-weight-medium">2012</h4>
-			<li class="o-grid__item u-width-1/4--@xl u-align-center">
+			<li class="o-grid__item u-width-1/4 u-align-center">
 				<img class="u-space-b2" src="/assets/dist/img/fmm.svg">
 				<h3><a href="http://rehabstudio.com">Fresh Made Media</a></h3>
 				<h4 class="u-color-text2 u-weight-medium">2014</h4>
-			<li class="o-grid__item u-width-1/4--@xl u-align-center">
+			<li class="o-grid__item u-width-1/4 u-align-center">
 				<img class="u-space-b2" src="/assets/dist/img/flint.svg">
 				<h3><a href="http://flintstudios.co.uk.com">Flint Studios</a></h4>
 				<h4 class="u-color-text2 u-weight-medium">2015</h4>
@@ -46,15 +46,15 @@ title: Home
 		<ul class="o-grid o-grid--center">
 
 				{% for post in site.posts limit:3 %}
-					<li class="o-grid__item t-{{ post.category }} u-width-half--@xl u-space-b4">
+					<li class="o-grid__item t-{{ post.category }} u-width-half u-space-b4">
 						<div class="c-card t-border-color">
 
 							<div class="c-card__info u-pad-2 u-pad-t3 u-border-bottom">
-								<div class="u-color-text2 u-space-b1">
-									<time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %d, %Y" }}</time>
+								<div class="u-space-b1">
+									<time class="u-color-text2" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %d, %Y" }}</time>
 									<div class="t-text-color u-weight-medium u-float-right">#{{ post.category }}</div>
 								</div>
-								<h2>{{ post.title }}</h2>
+								<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
 							</div>
 							<div class="c-card__actions u-pad-1">
 								<a class="c-dialog-btn t-text-color u-weight-medium u-case-upper" href="{{ post.url }}">Read</a>
@@ -63,7 +63,7 @@ title: Home
 				{% endfor %}
 
 		</ul>
-		<div class="u-align-right">
+		<!-- <div class="u-align-right">
 			<a class="c-btn" href="/blog">View More Articles</a>
-		</div>
+		</div> -->
 </section>

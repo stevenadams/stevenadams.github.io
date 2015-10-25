@@ -13,7 +13,7 @@ A lot of the work I have been doing recently has been geared towards more effici
 
 I could do something similar to the current way I was handling grid items at breakpoints by prefixing the breakpoint name to the width class - `xl-1-4 s-half` (or `s-2-4`). This wouldn't really work because I already have the "u" prefix which determines the type of class and where to find it in the sass folder structure. I would end up with `.xl-u-space-r2`.
 
-A couple of weeks back I had the opportunity of meeting up with Harry, while he was in Belfast on business. I didn't want all conversation to be based around what we do all day every day, but I couldn't resist picking his brain on my problem with utility classes and responsiveness. The solution that Harry suggested was to use modifier suffixes for the breakpoints instead of prefixing them to the start of the selector string. After all that's what we want to do, modify the spacing class at various breakpoints. So we end up with `.u-space-r2--@xl` an @ symbol being the most self explanatory symbol to use.
+A few weeks back I had the opportunity of meeting up with Harry, while he was in Belfast on business. I didn't want all conversation to be based around what we do all day every day, but I couldn't resist picking his brain on my problem with utility classes and responsiveness. The solution that Harry suggested was to use modifier suffixes for the breakpoints instead of prefixing them to the start of the selector string. After all that's what we want to do, modify the spacing class at various breakpoints. So we end up with `.u-space-r2--@xl` an @ symbol being the most self explanatory symbol to use.
 
 The generation of these classes is relatively easy using Sass
 
@@ -29,10 +29,10 @@ The generation of these classes is relatively easy using Sass
         }
 	}
 
-Now we can add our modifier selectors to elements to dictate the value of selector attributes at different breakpoints. This is most useful when used with utility selectors the generally only have one attribute.
+Now we can add these modifier selectors to elements allowing us to dictate the value of certain attributes at different breakpoints. This is most useful when used with utility selectors that generally only have one attribute.
 
 I have updated my width classes to have the same naming convention and it works really well.
 
-	<div class="o-grid__item u-width1-4--@xl"></div>
+	<div class="o-grid__item u-width-1/4--@xl"></div>
 
 Hat tip to Harry for more of his genius. If you're into CSS nerd stuff you should definitely check out [his blog](http://csswizardry.com/#section:articles), and/or [CSS Guidelines](http://cssguidelin.es/).

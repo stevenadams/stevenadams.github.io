@@ -20,13 +20,7 @@
 	}
 }
 
-// /*Animation Prefs*/
-// @keyframes pulse {
-//       0% {background-color: palette('blue');}
-//      50% {background-color: darken(palette('blue'), 5%);}
-//      100% {background-color: darken(palette('blue'), 10%);}
-// }
-//
-// .c-band--pulsing{
-// 	animation: pulse 10s infinite alternate;
-// }
+.c-band--gradient{
+	background: palette('highlight');
+	background-image: linear-gradient(108deg, #4DDABC 0%, #4DB2DA 70%);
+}
