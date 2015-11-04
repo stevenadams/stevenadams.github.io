@@ -2,10 +2,10 @@
 =            Config            =
 ==============================*/
 
-	@import 'config/global';
-	@import 'config/colors';
-	@import 'config/grid';
-	@import 'config/z-index';
+	@import 'config.global';
+	@import 'config.colors';
+	@import 'config.grid';
+	@import 'config.z-index';
 
 /*-----  End of Config  ------*/
 
@@ -16,8 +16,8 @@
 =            Tools            =
 =============================*/
 
-	@import 'tools/functions';
-	@import 'tools/mixins';
+	@import 'tools.functions';
+	@import 'tools.mixins';
 
 /*-----  End of Tools  ------*/
 
@@ -28,11 +28,11 @@
 =            Generic            =
 ===============================*/
 
-	@import 'generic/normalize';
-	@import 'generic/reset';
-	@import 'generic/box-sizing';
-	@import 'generic/icon-font';
-	@import 'generic/shared';
+	@import 'generic.normalize';
+	@import 'generic.reset';
+	@import 'generic.box-sizing';
+	@import 'generic.icon-font';
+	@import 'generic.shared';
 
 /*-----  End of Generic  ------*/
 
@@ -43,16 +43,17 @@
 =            Elements            =
 ================================*/
 
-	@import 'elements/headings';
-	@import 'elements/paragraph';
-	@import 'elements/images';
-	@import 'elements/links';
-	@import 'elements/lists';
-	@import 'elements/buttons';
-	@import 'elements/page';
-	@import 'elements/table';
-	@import 'elements/quotes';
-	@import 'elements/select';
+	@import 'elements.headings';
+	@import 'elements.paragraph';
+	@import 'elements.images';
+	@import 'elements.links';
+	@import 'elements.lists';
+	@import 'elements.buttons';
+	@import 'elements.page';
+	@import 'elements.pre';
+	@import 'elements.table';
+	@import 'elements.quotes';
+	@import 'elements.select';
 
 /*-----  End of Elements  ------*/
 
@@ -63,10 +64,9 @@
 =            Objects            =
 ===============================*/
 
-	@import 'objects/wrappers';
-	@import 'objects/main';
-	@import 'objects/grid';
-	@import 'objects/media';
+	@import 'objects.wrappers';
+	@import 'objects.grid';
+	@import 'objects.media';
 
 /*-----  End of Objects  ------*/
 
@@ -77,12 +77,13 @@
 =            Components            =
 ==================================*/
 
-	@import 'components/bands';
-	@import 'components/buttons';
-	@import 'components/cards';
-	@import 'components/page-head';
-	@import 'components/page-nav';
-	@import 'components/social';
+	@import 'components.bands';
+	@import 'components.buttons';
+	@import 'components.cards';
+	@import 'components.page-head';
+	@import 'components.page-nav';
+	@import 'components.social';
+	@import 'components.logo';
 
 /*-----  End of Components  ------*/
 
@@ -93,29 +94,41 @@
 =            Scopes            =
 ==============================*/
 
-
+	@import 'scopes.post';
 
 /*-----  End of Scopes  ------*/
 
 
-
-
 /*==============================
-=            Trumps            =
+=            Themes            =
 ==============================*/
 
-	@import 'trumps/clearfix';
-	@import 'trumps/text-columns';
-	@import 'trumps/colors';
-	@import 'trumps/display';
-	@import 'trumps/floats';
-	@import 'trumps/links';
-	@import 'trumps/spacing';
-	@import 'trumps/padding';
-	@import 'trumps/type';
-	@import 'trumps/widths';
-	@import 'trumps/vertical';
-	@import 'trumps/center';
-	@import 'trumps/lists';
+	@import 'themes.categories';
 
-/*-----  End of Trumps  ------*/
+/*-----  End of Themes  ------*/
+
+
+/*=============================
+=            Utils            =
+=============================*/
+
+	@import 'utils.align';
+	@import 'utils.backgrounds';
+	@import 'utils.border';
+	@import 'utils.case';
+	@import 'utils.center';
+	@import 'utils.clearfix';
+	@import 'utils.colors';
+	@import 'utils.display';
+	@import 'utils.floats';
+	@import 'utils.links';
+	@import 'utils.lists';
+	@import 'utils.padding';
+	@import 'utils.position';
+	@import 'utils.spacing';
+	@import 'utils.text-columns';
+	@import 'utils.valign';
+	@import 'utils.weights';
+	@import 'utils.widths';
+
+/*-----  End of Utils  ------*/

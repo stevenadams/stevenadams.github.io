@@ -1,0 +1,15 @@
+@each $category, $color in $category-colors {
+	.t-#{$category}{
+		.t-text-color{
+			color: $color;
+		}
+
+		.t-background-color{
+			background-color: $color;
+		}
+
+		.t-border-color{
+			border-color: $color;
+		}
+	}
+}

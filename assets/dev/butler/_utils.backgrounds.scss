@@ -1,0 +1,19 @@
+.u-{
+	@each $palette, $color in $palettes {
+		&background-#{$palette}{
+			background-color: palette($palette);
+
+			@if(palette($palette, 2)){
+				&2{
+					background-color: palette($palette, 2);
+				}
+			}
+
+			@if(palette($palette, 3)){
+				&3{
+					background-color: palette($palette, 3);
+				}
+			}
+		}
+	}
+}

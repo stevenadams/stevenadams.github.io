@@ -1,0 +1,23 @@
+.c-dialog-btn{
+	padding-right: $space;
+	padding-left: $space;
+}
+
+.c-btn{
+  background: palette('highlight');
+  display: inline-block;
+  color: palette('white');
+  line-height: 1em;
+	font-weight: 500;
+  border: none;
+  box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 2px 0px rgba(0,0,0,0.24);
+  padding: 10px ($space);
+  text-align: center;
+  transition: all 0.4s ease-in-out;
+
+  &:hover{
+  	color: palette('white');
+    background: lighten(palette('highlight'), 4%);
+    box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.12), 0px 8px 8px 0px rgba(0,0,0,0.24);
+  }
+}

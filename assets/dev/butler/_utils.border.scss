@@ -1,0 +1,7 @@
+$border: 1px solid palette('divider');
+
+.u-border{ border: $border; }
+.u-border-top{ border-top: $border; }
+.u-border-right{ border-right: $border; }
+.u-border-bottom{ border-bottom: $border; }
+.u-border-left{ border-left: $border; }

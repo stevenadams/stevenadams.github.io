@@ -1,0 +1,14 @@
+pre{
+	white-space: pre;
+	word-wrap: normal;
+	overflow: auto;
+	border-radius: 2px;
+	background-color: palette('text');
+	color: palette('white');
+	padding: ($space * 2);
+	margin-bottom: ($space * 2);
+}
+
+pre, code{
+	font-family: 'Roboto Mono', Courier, monospace;
+}

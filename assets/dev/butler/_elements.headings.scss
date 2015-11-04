@@ -1,0 +1,19 @@
+h1 {
+    @include rem(font-size, $heading-size-1);
+    @include rem(line-height, ($heading-size-1 + $space));
+}
+
+h2 {
+    @include rem(font-size, $heading-size-2);
+    @include rem(line-height, ($heading-size-2 + $space));
+}
+
+h3 {
+    @include rem(font-size, $heading-size-3);
+    @include rem(line-height, ($heading-size-3 + $space));
+}
+
+h4 {
+    @include rem(font-size, $heading-size-4);
+    @include rem(line-height, ($heading-size-4 + $space));
+}
